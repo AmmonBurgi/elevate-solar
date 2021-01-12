@@ -1,0 +1,49 @@
+.header-component{
+    width: 65vw;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-left-section{
+    width: 35%;
+    display: flex;
+    align-items: flex-start;
+}
+.header-icon-text{
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.header-icon-text p{
+    color: tomato;
+}
+.header-icon-text hr{
+    width: 100%;
+    border-color: rgb(255, 146, 126);
+    color: rgb(255, 146, 126);
+}
+.header-icon-title{
+    font-size: 25px;
+    margin: 0;
+}
+.header-title-second{
+    font-size: 12px;
+    margin: 0;
+}
+.header-title-third{
+    font-size: 12px;
+    margin: 0;
+}
+.header-right-section{
+    width: 63%;
+    box-sizing: border-box;
+    height: 4vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    color: salmon;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
