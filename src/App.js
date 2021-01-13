@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import routes from './routes'
+import {withRouter} from 'react-router-dom'
 import Header from './Components/Header/Header'
 import './App.css';
 
@@ -23,4 +24,4 @@ function App(){
   );
 }
 
-export default App;
+export default withRouter(App);

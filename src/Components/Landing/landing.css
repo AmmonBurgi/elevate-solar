@@ -1,0 +1,39 @@
+.landing-component{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.landing-top-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.landing-nav-links{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.landing-nav-links img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    z-index: -10;
+}
+.landing-align-nav-tags{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+.landing-nav-tags{
+    width: 25%;
+    box-sizing: border-box;
+}
+#landing-nav-first-border{
+    border-left: 4px solid tomato;
+}
+#landing-nav-second-border{
+    border-left: 4px solid tomato;
+    border-right: 4px solid tomato;
+}

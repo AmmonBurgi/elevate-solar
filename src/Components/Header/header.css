@@ -1,9 +1,10 @@
 .header-component{
-    width: 65vw;
+    width: 60vw;
     height: 15vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 4vh;
 }
 .header-left-section{
     width: 35%;
@@ -37,13 +38,82 @@
     margin: 0;
 }
 .header-right-section{
-    width: 63%;
+    width: 60%;
     box-sizing: border-box;
-    height: 4vh;
+    height: 3.5vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     border-radius: 5px;
     color: salmon;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+    /* box-shadow: rgba(255, 99, 71, 0.7) -5px 5px, rgba(255, 99, 71, 0.5) -10px 10px, rgba(255, 99, 71, 0.3) -15px 15px, rgba(255, 99, 71, 0.2) -20px 20px */
+}
+.header-nav-box{
+    background-color: white;
+    color: black;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s;
+    /* z-index: -1; */
+}
+.header-nav-box:hover .absolute-front-color{
+    background-color: tomato;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.header-nav-box:hover .header-nav-text{
+    color: white;
+}
+.header-nav-box .header-nav-text{
+    margin-right: .5vw;
+    margin-left: .5vw;
+    z-index: 100;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.absolute-front-color{
+    position: absolute;
+    width: 0;
+    height: 100%;
+    box-sizing: border-box;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transition: .25s ease-in;
+}
+.absolute-home-color{
+    background-color: tomato;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    position: absolute;
+    height: 100%;
+    box-sizing: border-box;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.header-contact{
+    position: absolute;
+    right: 0;
+    bottom: -6.5vh;
+    font-size: 20px;
+    font-weight: bold;
+}
+.white-nav-text{
+    margin-right: .5vw;
+    margin-left: .5vw;
+    z-index: 100;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
 }
