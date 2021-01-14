@@ -20,15 +20,48 @@
     height: auto;
     border-radius: 10px;
     z-index: -10;
+    position: relative;
 }
 .landing-align-nav-tags{
     position: absolute;
-    width: 100px;
-    height: 100px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
 }
 .landing-nav-tags{
     width: 25%;
     box-sizing: border-box;
+    height: 100%;
+    position: relative;
+}
+.landing-nav-tags div{
+    background-color: tomato;
+    width: 100%;
+    height: 7vh;
+    position: absolute;
+    top: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    transition: .25s ease-out;
+}
+.landing-nav-tags div:hover{
+    cursor: pointer;
+    height: 9vh;
+    -webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+}
+.landing-nav-tags div p{
+    margin-left: 2%;
+    font-weight: bolder;
+    font-size: 27px;
+}
+#even-tags{
+    top: 65%;
 }
 #landing-nav-first-border{
     border-left: 4px solid tomato;

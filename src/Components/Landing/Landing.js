@@ -1,28 +1,45 @@
 import React from 'react'
 
 import panelInstal from '../../Solar Panel Installation.webp'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faHandshake} from '@fortawesome/free-solid-svg-icons'
+import {faBoxOpen} from '@fortawesome/free-solid-svg-icons'
+import {faLightbulb} from '@fortawesome/free-solid-svg-icons'
+import {faInfoCircle} from '@fortawesome/free-solid-svg-icons'
 import './landing.css'
 
-function Landing(){
+function Landing(props){
     return(
         <div className='landing-component'>
             <section className='landing-top-section'>
                 <div className='landing-nav-links'>
                     <img src={panelInstal} />
-                    <nav className='landing-align-nav-tags'>
+                    <div className='landing-align-nav-tags'>
                         <div className='landing-nav-tags'>
-                            
+                            <div onClick={() => props.history.push('/talk')}>
+                                <FontAwesomeIcon icon={faHandshake}></FontAwesomeIcon>
+                                <p>Talk To Someone</p>
+                            </div>
                         </div>
                         <div id='landing-nav-first-border' className='landing-nav-tags'>
-
+                            <div onClick={() => props.history.push('/works')} id='even-tags'>
+                                <FontAwesomeIcon icon={faBoxOpen}></FontAwesomeIcon>
+                                <p >How It Works</p>
+                            </div>
                         </div>
                         <div id='landing-nav-second-border' className='landing-nav-tags'>
-
+                            <div onClick={() => props.history.push('/careers')}>
+                                <FontAwesomeIcon icon={faInfoCircle}></FontAwesomeIcon>
+                                <p>About</p>
+                            </div>
                         </div>
                         <div className='landing-nav-tags'>
-
+                            <div onClick={() => props.history.push('/science')} id='even-tags'>
+                                <FontAwesomeIcon icon={faLightbulb}></FontAwesomeIcon>
+                                <p>Solar Science</p>
+                            </div>
                         </div>
-                    </nav>
+                    </div>
                 </div>
                 <div className='landing-meet'>
 
