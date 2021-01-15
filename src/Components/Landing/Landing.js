@@ -1,6 +1,7 @@
 import React from 'react'
 
 import panelInstal from '../../Solar Panel Installation.webp'
+import solarIcon from '../../logo_transparent_background.webp'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faHandshake} from '@fortawesome/free-solid-svg-icons'
 import {faBoxOpen} from '@fortawesome/free-solid-svg-icons'
@@ -42,18 +43,29 @@ function Landing(props){
                     </div>
                 </div>
                 <div className='landing-meet'>
+                    <div className='landing-meet-video'>
 
+                    </div>
+                    <div className='landing-meet-button'>
+                        <p>Let's Meet</p>
+                        <button>Book Now</button>
+                    </div>
                 </div>
             </section>
-            <hr></hr>
+            <hr className='landing-tb-hr'></hr>
             <section className='landing-bottom-section'>
-                <p></p>
-                <div>
+                <p>We understand the importance of renewable
+                energy and make it simple for customers to make the switch with no debt and up-front costs.</p>
+                <div className='landing-btm-savings'>
                     <nav>
-                        <p></p>
-                        <p></p>
+                        <p className='landing-saving-title'>SOLAR EQUALS
+                        SMART SAVINGS</p>
+                        <p className='landing-saving-first'>Choosing solar puts you in control of your electric bill
+                        and your home environment. Partnering with Elevate Solar
+                        allows us to help you do that without a pennyout-of-pocket.</p>
+                        <p className='landing-saving-last'>With Elevate Solar, you can save money on your electricity bill and lower your dependence on scarce, expensive fossil fuels.</p>
                     </nav>
-                    <img />
+                    <img src={solarIcon} alt='solar-icon' />
                 </div>
                 <div>
                     <p></p>

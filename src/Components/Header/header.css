@@ -77,7 +77,7 @@
     z-index: 100;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: rgb(66, 66, 66);
 }
 .absolute-front-color{
     position: absolute;
