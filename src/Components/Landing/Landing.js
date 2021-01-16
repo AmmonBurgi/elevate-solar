@@ -2,6 +2,8 @@ import React from 'react'
 
 import panelInstal from '../../Solar Panel Installation.webp'
 import solarIcon from '../../logo_transparent_background.webp'
+import manSolar from '../../Man shows his family the solar panels on.webp'
+import map from '../../map.webp'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faHandshake} from '@fortawesome/free-solid-svg-icons'
 import {faBoxOpen} from '@fortawesome/free-solid-svg-icons'
@@ -14,7 +16,7 @@ function Landing(props){
         <div className='landing-component'>
             <section className='landing-top-section'>
                 <div className='landing-nav-links'>
-                    <img src={panelInstal} />
+                    <img alt='Panel-Installing' src={panelInstal} />
                     <div className='landing-align-nav-tags'>
                         <div className='landing-nav-tags'>
                             <div onClick={() => props.history.push('/talk')}>
@@ -67,18 +69,27 @@ function Landing(props){
                     </nav>
                     <img src={solarIcon} alt='solar-icon' />
                 </div>
-                <div>
-                    <p></p>
-                    <nav>
-                        <p></p>
-                        <img />
+                <div className='landing-btm-why'>
+                    <p className='landing-why-title'>WHY ELEVATE SOLAR ENERGY?</p>
+                    <nav className='landing-btm-why-text'>
+                        <nav>
+                            <p className='why-text-first'>You’ve probably heard that solar panels can save your money. And that’s true. You’ve probably also heard that they’re too expensive for most people to afford. <b>We’re happy to inform you, that is not true.</b></p>
+                            <p className='why-text-last'>
+                            Elevate Solar is in search of VIP customers who serve as neighborhood 
+                            advertising homes for our energy and cost saving solar technology.
+                            By qualifying for our neighborhood advertising home program, we have one of our solar engineers custom design a solar system for your home. Then we install, finance, and service that solar system all at no cost to you. All you do is pay for the power our array produces which is anywhere from 20-40% less than you were paying for traditional power. And we give you a set rate. You know how much you pay at all times and you can plan for the future. With a fixed rate, you know how much your bill will be every year. That means no spikes in cost and no surprises. We call it our $0 down and pay as you go reward.
+                            </p>
+                        </nav>
+                        <img src={manSolar} />
                     </nav>
                 </div>
-                <div>
-                    <p></p>
-                    <img />
-                    <p></p>
-                    <p></p>
+                <hr id='landing-middle-hr' className='landing-tb-hr'></hr>
+                <div className='landing-btm-map'>
+                    <p className='landing-btm-nation'>Currently, this is the Elevate Solar coverage area. Keep in mind we are growing at SOLAR speed.
+                    18 months ago there were only 4 states that were consuming solar energy, but now we are NATIONWIDE</p>
+                    <img alt='Map' src={map} />
+                    <p className='landing-btm-map-title'>Ready to Learn More About Home Solar Power?</p>
+                    <p className='landing-btm-map-text'>Good! We encourage you to do your research so that you can feel completely comfortable before you get started on your home solar power journey. The pages in this section were designed to help you understand how home solar power works, all the steps of solar panel design and solar installation, and the environmental advantages of solar energy.</p>
                 </div>
             </section>
         </div>

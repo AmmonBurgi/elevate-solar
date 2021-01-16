@@ -113,7 +113,6 @@
 }
 .landing-meet-button button:hover{
     cursor: pointer;
-    box-shadow: inset 0px 0px 10px 0px tomato;
 }
 
 .landing-tb-hr{
@@ -141,6 +140,7 @@
     width: 100%;
     height: 40vh;
     align-items: flex-start;
+    margin-bottom: 5vh;
 }
 .landing-btm-savings img{
     width: auto;
@@ -152,7 +152,7 @@
     text-align: left;
 }
 .landing-saving-title{
-    font-size: 1.9vw;
+    font-size: 2.1vw;
     color: tomato;
 }
 .landing-saving-first{
@@ -164,4 +164,78 @@
     font-size: 1.4vw;
     line-height: 4vh;
     color: rgb(66, 66, 66);
+}
+.landing-btm-why{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.landing-btm-why-text{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+.landing-btm-why-text img{
+    width: 52%;
+    height: auto;
+    margin-right: 2%;
+    border-radius: 10px;
+}
+.landing-why-title{
+    font-size: 4.5vw;
+    color: tomato;
+    margin-bottom: 2vh;
+}
+.landing-btm-why-text nav{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 46%;
+    font-size: 1vw;
+    color: rgb(66,66,66);
+}
+.landing-btm-why-text nav p{
+    line-height: 2.8vh;
+}
+.why-text-first{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.why-text-last{
+    margin-bottom: 0;
+}
+
+#landing-middle-hr{
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+}
+
+.landing-btm-map{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.landing-btm-map img{
+    width: 75%;
+    height: auto;
+}
+.landing-btm-nation{
+    font-size: 1.2vw;
+    font-weight: bolder;
+    color: rgb(66,66,66);
+}
+.landing-btm-map-title{
+    font-size: 2.3vw;
+    color: tomato;
+    margin-top: 6vh;
+    margin-bottom: 2vh;
+}
+.landing-btm-map-text{
+    margin-top: 0;
+    font-size: 1.4vw;
+    color: rgb(66,66,66);
+    line-height: 3.5vh;
 }
