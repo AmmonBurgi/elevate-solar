@@ -10,7 +10,7 @@
   align-items: center;
 }
 .app-component{
-  width: 60vw;
+  width: 65vw;
   transition: .5s ease-in-out;
   opacity: 1;
 }
