@@ -11,6 +11,7 @@
 }
 .app-component{
   width: 65vw;
+  min-height: 60vh;
   transition: .5s ease-in-out;
   opacity: 1;
 }
