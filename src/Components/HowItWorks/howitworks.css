@@ -1,0 +1,74 @@
+.works-component{
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Ropa Sans', sans-serif;
+    color: rgb(66,66,66);
+}
+.works-top-section p{
+    font-size: 1vw;
+    margin-left: .5vw;
+}
+#works-top-title{
+    font-size: 4vw;
+    color: tomato;
+    margin-top: 0;
+    margin-bottom: 2vh;
+    font-weight: bolder;
+    margin-left: 0;
+}
+#works-list-title{
+    font-size: 1.4vw;
+    margin-bottom: 0;
+    color: tomato;
+}
+.works-top-list{
+    margin-top: 0;
+    margin-bottom: 4vh;
+    font-size: 1.3vw;
+    color: tomato;
+}
+.works-hr{
+    width: 100%;
+    border-color: rgba(255, 99, 71, 0.508);
+}
+#top-last-tag{
+    margin-bottom: 4vh;
+}
+#works-afford-title{
+    font-size: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 0;
+    color: tomato;
+}
+
+.works-bottom-section nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+.works-bottom-section nav img{
+    width: 70%;
+    height: auto;
+}
+.works-bottom-section p{
+    font-size: 1vw;
+    margin-left: .5vw;
+}
+#works-bottom-title{
+    font-size: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    color: tomato;
+}
+#works-bottom-prof{
+    font-size: 2vw;
+    margin-top: 0;
+    margin-bottom: 2vh;
+    color: tomato;
+}
