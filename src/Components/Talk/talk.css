@@ -4,3 +4,64 @@
     align-items: center;
     width: 100%;
 }
+.talk-component hr{
+    width: 100%;
+    border-color: rgba(255, 99, 71, 0.508);
+}
+.talk-top-first{
+    display: flex;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5vh;
+    align-items: center;
+}
+.talk-top-first img{
+    width: 50%;
+    height: auto;
+    margin-left: 2vw;
+    border-radius: 10px;
+}
+.talk-top-last{
+    display: flex;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    margin-bottom: 6vh;
+}
+.talk-top-last img{
+    width: 50%;
+    height: auto;
+    margin-right: 2vw;
+    border-radius: 10px;
+}
+.talk-first-text p{
+    font-size: 1.3vw;
+    line-height: 3.5vh;
+}
+.talk-last-text p{
+    font-size: 1.3vw;
+    line-height: 3.5vh;
+}
+#talk-first-last-title{
+    font-size: 2vw;
+    color: tomato;
+    font-weight: bold;
+}
+
+.talk-top-text-section p{
+    font-size: 1vw;
+    line-height: 3.5vh;
+    text-align: left;
+}
+#talk-text-section-title{
+    font-size: 3vw;
+    margin-top: 2vh;
+    font-weight: bold;
+    color: tomato;
+    text-transform: uppercase;
+}
+#talk-text-subtitle{
+    font-size: 2vw;
+    color: tomato;
+    margin-bottom: 2vh;
+}
