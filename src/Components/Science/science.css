@@ -1,0 +1,53 @@
+.science-component{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    font-family: 'Enriqueta', serif;
+}
+.science-component hr{
+    width: 100%;
+    border-color: rgba(255, 99, 71, 0.508);
+}
+.science-steps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4vh;
+}
+.science-align-top-steps{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.science-align-top-steps nav{
+    width: 32%;
+    text-align: left;
+    font-size: .9vw;
+}
+.science-steps img{
+    width: 70%;
+    height: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    border: 2px solid tomato;
+    border-radius: 10px;
+}
+.science-align-bottom-steps{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.science-align-bottom-steps nav{
+    width: 32%;
+    text-align: left;
+    font-size: .9vw;
+}
+#science-step-subtitles{
+    font-size: 1.2vw;
+    color: tomato;
+    font-weight: bold;
+    margin-bottom: 1vh;
+}

@@ -34,8 +34,9 @@ function Talk(){
                     <p>Every home and roof is unique, and a big part of crafting your solar panel design has to do with  understanding your property. Elevate Solar will send an energy technician to your home to assess your roof. The technician will make sure your roof is in good enough condition for the panels, determine the best areas of the roof that receives the most sun, and determine if things like trees are creating shade,  which could lower the efficiency of your panels.</p>
                 </section>
             </div>
+            <hr></hr>
             <div className='talk-quote-form'>
-
+                
             </div>
         </div>
     )

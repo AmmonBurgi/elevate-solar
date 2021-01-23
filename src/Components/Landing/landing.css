@@ -98,7 +98,7 @@
 }
 .landing-meet-button p{
     margin-top: 0;
-    font-family: 'Ropa Sans', sans-serif;
+    font-family: 'Enriqueta', serif;
     font-size: 2vw;
     color: white;
 }
@@ -125,7 +125,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-family: 'Ropa Sans', sans-serif;
+    font-family: 'Enriqueta', serif;
 }
 .landing-bottom-section > p{
     word-spacing: 3px;
