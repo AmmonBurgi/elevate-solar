@@ -21,3 +21,9 @@
   opacity: 0;
   transition: .5s;
 }
+
+@media (max-width: 1440px){
+  .app-component{
+    width: 75vw;
+  }
+}

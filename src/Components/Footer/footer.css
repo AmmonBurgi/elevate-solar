@@ -64,3 +64,9 @@
     text-align: right;
     font-size: .9vw;
 }
+
+@media (max-width: 1440px){
+    .footer-main{
+        width: 75%;
+    }
+}
