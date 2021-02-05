@@ -55,3 +55,11 @@
     font-weight: bold;
     margin-bottom: 1vh;
 }
+#science-subtitle{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2vw;
+    color: tomato;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    margin-top: 0;
+}

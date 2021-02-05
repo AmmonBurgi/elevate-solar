@@ -63,7 +63,7 @@ function Science(){
             </div>
             <hr></hr>
             <div>
-                <p>Your Energy Ecosystem</p>
+                <p id='science-subtitle'>Your Energy Ecosystem</p>
                 <p>When it comes to solar power for the home, placement is a big deal. Solar panels work best when they get as much uninterrupted sunlight as possible each day. In the United States, this means placing the panels as close to true south as possible and inclined at an angle close to the area’s latitude. The more sunlight, the more energy the panels can produce.</p>
                 <p>What happens at night when the sun is gone but you still need energy to make dinner, watch your favorite show, and do a load of dishes? This is where the idea of the energy ecosystem comes in. Your solar panels are actually hooked to your home’s energy grid.</p>
                 <p>During the day, your solar panels may produce more energy than you need, especially if the members of your household are at work or school. This energy doesn’t go to waste. Instead, it goes into the energy grid and your electricity meter actually turns backwards. Yes, it can do that.</p>
@@ -71,7 +71,7 @@ function Science(){
             </div>
             <hr></hr>
             <div>
-                <p>Direct Current into Alternating Current</p>
+                <p id='science-subtitle'>Direct Current into Alternating Current</p>
                 <p>When the sun shines down upon a solar panel, the sun’s energy is turned into a direct current (DC). Unfortunately, the DC can’t just plug right into your home and start powering your microwave and other electronics. Your home’s electrical system speaks a different language called alternating current (AC). In order to actually enjoy the energy your solar panel array is producing, your system will use a device called an inverter to turn the DC coming from your solar panels to the AC that your home can use to feed your electricity needs.</p>
             </div>
         </div>
