@@ -1,6 +1,6 @@
 import React from 'react'
 
-import panelInstal from '../../Solar Panel Installation.webp'
+import panelInstall from '../../Solar Panel Installation.webp'
 import solarIcon from '../../logo_transparent_background.webp'
 import manSolar from '../../Man shows his family the solar panels on.webp'
 import map from '../../map.webp'
@@ -16,7 +16,7 @@ function Landing(props){
         <div className='landing-component'>
             <section className='landing-top-section'>
                 <div className='landing-nav-links'>
-                    <img alt='Panel-Installing' src={panelInstal} />
+                    <img alt='Panel-Installing' src={panelInstall} />
                     <div className='landing-align-nav-tags'>
                         <div className='landing-nav-tags'>
                             <div onClick={() => props.history.push('/talk')}>
@@ -54,7 +54,7 @@ function Landing(props){
                     </div>
                 </div>
             </section>
-            <hr className='landing-tb-hr'></hr>
+            <div id='hr-border'></div>
             <section className='landing-bottom-section'>
                 <p>We understand the importance of renewable
                 energy and make it simple for customers to make the switch with no debt and up-front costs.</p>
@@ -83,7 +83,7 @@ function Landing(props){
                         <img src={manSolar} />
                     </nav>
                 </div>
-                <hr id='landing-middle-hr' className='landing-tb-hr'></hr>
+                <div id='hr-border'></div>
                 <div className='landing-btm-map'>
                     <p className='landing-btm-nation'>Currently, this is the Elevate Solar coverage area. Keep in mind we are growing at SOLAR speed.
                     18 months ago there were only 4 states that were consuming solar energy, but now we are NATIONWIDE</p>

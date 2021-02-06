@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    color: rgb(66,66,66);
 }
 .talk-component hr{
     width: 100%;

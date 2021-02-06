@@ -22,7 +22,7 @@ function Talk(){
                         <p>The hallmark of a good solar energy system is one that produces just enough energy throughout the year to cover your energy needs. Not too much…not too little…just right. This doesn’t just magically happen. The key is a carefully researched and developed solar panel design.</p>
                     </nav>
                 </div>
-                <hr></hr>
+                <div id='hr-border'></div>
                 <section className='talk-top-text-section'>
                     <p id='talk-text-section-title'>Here's how we do it!</p>
                     <p id='talk-text-subtitle'>Step One: The Paperwork</p>
@@ -34,7 +34,7 @@ function Talk(){
                     <p>Every home and roof is unique, and a big part of crafting your solar panel design has to do with  understanding your property. Elevate Solar will send an energy technician to your home to assess your roof. The technician will make sure your roof is in good enough condition for the panels, determine the best areas of the roof that receives the most sun, and determine if things like trees are creating shade,  which could lower the efficiency of your panels.</p>
                 </section>
             </div>
-            <hr></hr>
+            <div id='hr-border'></div>
             <div className='talk-quote-form'>
                 
             </div>

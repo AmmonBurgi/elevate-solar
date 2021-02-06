@@ -20,7 +20,7 @@ function HowItWorks(){
                         <li>Home values increase an average of $50,000</li>
                     </ul>
                 </nav>
-                <hr className='works-hr'></hr>
+                <div id='hr-border'></div>
                 <p id='works-afford-title'>HOW CAN WE AFFORD THIS?</p>
                 <p>We essentially become your new power company. We calculate how much you have been paying to your current power company each month and we then drop your monthly power bill payments to us by 25% to 40% less.</p>
                 <p>You as a Customer will pay Elevate Solar instead of your local utility. We factor the cost of the solar system into your monthly electricity payments over the next 20 years.</p>
@@ -31,7 +31,7 @@ function HowItWorks(){
                 <p>At the end of the contract, you OWN the solar system outright and your electricity payments to us stop. You are now generating FREE ENERGY! If you use less power than what the panels are producing, you can start selling your excess electricity back to the the grid, creating a new revenue stream!</p>
                 <p id='top-last-tag'>If you decide to sell your house before the solar contract is finished, thats fine. The new homeowner would just assume the Elevate contract until it is fulfilled.</p>
             </div>
-            <hr className='works-hr'></hr>
+            <div id='hr-border'></div>
             <div className='works-bottom-section'>
                 <p id='works-bottom-title'>WHAT'S THE REAL CATCH?</p>
                 <p>We're operating in residential neighborhoods only right now. If you own your home, have a utility bill over $100/mo and a 650 credit score or higher you are pre-approved for FREE solar.</p>
