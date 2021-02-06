@@ -4,6 +4,7 @@ import panelInstall from '../../Solar Panel Installation.webp'
 import solarIcon from '../../logo_transparent_background.webp'
 import manSolar from '../../Man shows his family the solar panels on.webp'
 import map from '../../map.webp'
+import landingGif from '../../gif-video.mp4'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faHandshake} from '@fortawesome/free-solid-svg-icons'
 import {faBoxOpen} from '@fortawesome/free-solid-svg-icons'
@@ -54,9 +55,15 @@ function Landing(props){
                     </div>
                 </div>
                 <div className='landing-meet'>
-                    <div className='landing-meet-video'>
-
-                    </div>
+                    {/* <div className='landing-meet-video'> */}
+                        <video 
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline 
+                        src={landingGif}
+                        className='landing-gif' />
+                    {/* </div> */}
                     <div className='landing-meet-button'>
                         <p>Let's Meet</p>
                         <button>Book Now</button>
