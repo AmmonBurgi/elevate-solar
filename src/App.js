@@ -6,19 +6,11 @@ import Footer from './Components/Footer/Footer'
 import './App.css';
 
 function App(){
-  const [fadeToggle, setFadeToggle] = useState(false)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setFadeToggle(true)
-    }, 100);
-    return () => clearTimeout(timer)
-  }, [])
 
   return (
     <div className="App">
       <Header />
-      <div className={fadeToggle === false ? 'zero' : 'app-component'}>
+      <div className='app-component'>
         {routes}
       </div>
       <Footer />

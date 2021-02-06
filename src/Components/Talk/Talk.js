@@ -1,12 +1,21 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 import './talk.css'
 import solarInstal from '../../Solar Panel Installation (1).webp'
 import solarPanels from '../../Solar Panels on Roof.webp'
 
 function Talk(){
+    const [fadeToggle, setFadeToggle] = useState(false)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setFadeToggle(true)
+        }, 100);
+        return () => clearTimeout(timer)
+      }, [])
+
     return (
-        <div className='talk-component'>
+        <div className={fadeToggle === false ? 'no-talk' : 'talk-component'}>
             <div className='talk-top-section'>
                 <div className='talk-top-first'>
                     <nav className='talk-first-text'>

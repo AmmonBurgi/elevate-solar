@@ -7,6 +7,11 @@
     font-family: 'Enriqueta', serif;
     color: rgb(66,66,66);
     font-size: 1vw;
+    opacity: 1;
+    transition: .75s ease-in-out;
+}
+.no-science{
+    opacity: 0;
 }
 .science-component hr{
     width: 100%;
@@ -30,7 +35,7 @@
 .science-steps-description{
     color: tomato;
     font-size: .9vw;
-    margin-bottom: 0;
+    margin-bottom: .5vw;
 }
 .align-all-steps{
     width: 100%;
@@ -70,12 +75,15 @@
     margin-left: .5vw;
 }
 .science-sun-steps p{
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     margin-left: .5vw;
+    margin-bottom: 0;
     color: tomato;
 }
-.sun-steps{
+#sun-steps{
+    font-size: 1.2vw;
     margin-top: 0;
+    color: tomato;
 }
 .science-sun-steps ul{
     margin-top: 2vh;

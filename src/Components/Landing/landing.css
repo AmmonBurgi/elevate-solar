@@ -5,6 +5,12 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    color: rgb(66,66,66);
+    opacity: 1;
+    transition: .75s ease-in-out;
+}
+.no-landing{
+    opacity: 0;
 }
 .landing-top-section{
     width: 100%;
@@ -78,7 +84,7 @@
     height: 34vh;
     background-color: wheat;
     margin-top: 1vh;
-    margin-bottom: 6vh;
+    margin-bottom: 2vh;
     display: flex;
 }
 .landing-meet-video{
@@ -184,7 +190,7 @@
     border-radius: 10px;
 }
 .landing-why-title{
-    font-size: 4.5vw;
+    font-size: 4.3vw;
     color: tomato;
     margin-bottom: 2vh;
 }

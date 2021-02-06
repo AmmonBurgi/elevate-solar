@@ -1,11 +1,20 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 import './howitworks.css'
 import map from '../../map.webp'
 
 function HowItWorks(){
+    const [fadeToggle, setFadeToggle] = useState(false)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setFadeToggle(true)
+        }, 100);
+        return () => clearTimeout(timer)
+      }, [])
+
     return( 
-        <div className='works-component'>
+        <div className={fadeToggle === false ? 'no-works' : 'works-component'}>
             <div className='works-top-section'>
                 <p id='works-top-title'>Here's how it works!</p>
                 <p>You know how AT&T® or Verizon® will give you a FREE Smartphone if you sign a 2 year contract with their company? They factor in the price of the phone into the contract. After the contract is complete, you own the phone. </p>

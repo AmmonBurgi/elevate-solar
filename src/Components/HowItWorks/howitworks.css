@@ -6,6 +6,11 @@
     align-items: flex-start;
     font-family: 'Enriqueta', serif;
     color: rgb(66,66,66);
+    opacity: 1;
+    transition: .75s ease-in-out;
+}
+.no-works{
+    opacity: 0;
 }
 .works-top-section p{
     font-size: 1vw;

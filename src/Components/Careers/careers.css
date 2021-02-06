@@ -1,0 +1,11 @@
+.career-component{
+    opacity: 1;
+    transition: .75s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.no-career{
+    opacity: 0;
+}

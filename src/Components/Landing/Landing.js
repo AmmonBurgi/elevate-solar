@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 import panelInstall from '../../Solar Panel Installation.webp'
 import solarIcon from '../../logo_transparent_background.webp'
@@ -12,11 +12,20 @@ import {faInfoCircle} from '@fortawesome/free-solid-svg-icons'
 import './landing.css'
 
 function Landing(props){
+    const [fadeToggle, setFadeToggle] = useState(false)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setFadeToggle(true)
+        }, 100);
+        return () => clearTimeout(timer)
+      }, [])
+
     return(
-        <div className='landing-component'>
+        <div className={fadeToggle === false ? 'no-landing' : 'landing-component'}>
             <section className='landing-top-section'>
                 <div className='landing-nav-links'>
-                    <img alt='Panel-Installing' src={panelInstall} />
+                    <img alt='Panel Installing' src={panelInstall} />
                     <div className='landing-align-nav-tags'>
                         <div className='landing-nav-tags'>
                             <div onClick={() => props.history.push('/talk')}>
@@ -64,10 +73,10 @@ function Landing(props){
                         SMART SAVINGS</p>
                         <p className='landing-saving-first'>Choosing solar puts you in control of your electric bill
                         and your home environment. Partnering with Elevate Solar
-                        allows us to help you do that without a pennyout-of-pocket.</p>
+                        allows us to help you do that without a penny out-of-pocket.</p>
                         <p className='landing-saving-last'>With Elevate Solar, you can save money on your electricity bill and lower your dependence on scarce, expensive fossil fuels.</p>
                     </nav>
-                    <img src={solarIcon} alt='solar-icon' />
+                    <img src={solarIcon} alt='solar icon' />
                 </div>
                 <div className='landing-btm-why'>
                     <p className='landing-why-title'>WHY ELEVATE SOLAR ENERGY?</p>
@@ -80,7 +89,7 @@ function Landing(props){
                             By qualifying for our neighborhood advertising home program, we have one of our solar engineers custom design a solar system for your home. Then we install, finance, and service that solar system all at no cost to you. All you do is pay for the power our array produces which is anywhere from 20-40% less than you were paying for traditional power. And we give you a set rate. You know how much you pay at all times and you can plan for the future. With a fixed rate, you know how much your bill will be every year. That means no spikes in cost and no surprises. We call it our $0 down and pay as you go reward.
                             </p>
                         </nav>
-                        <img src={manSolar} />
+                        <img src={manSolar} alt='Family and Solar Panel' />
                     </nav>
                 </div>
                 <div id='hr-border'></div>

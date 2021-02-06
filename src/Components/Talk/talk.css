@@ -4,6 +4,11 @@
     align-items: center;
     width: 100%;
     color: rgb(66,66,66);
+    opacity: 1;
+    transition: .75s ease-in-out;
+}
+.no-talk{
+    opacity: 0;
 }
 .talk-component hr{
     width: 100%;

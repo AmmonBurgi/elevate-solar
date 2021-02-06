@@ -1,11 +1,20 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 import solarHouse from '../../solar house.webp'
 import './science.css'
 
 function Science(){
+    const [fadeToggle, setFadeToggle] = useState(false)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setFadeToggle(true)
+        }, 100);
+        return () => clearTimeout(timer)
+      }, [])
+
     return (
-        <div className='science-component'>
+        <div className={fadeToggle === false ? 'no-science' : 'science-component'}>
             <div className='science-steps-section'>
                 <p id='science-title'>How Solar Power Systems Work!</p>
                 <p id='science-subtitle'>Shining The Light On Solar</p>
@@ -54,7 +63,7 @@ function Science(){
                 <p>In certain specific materials, the energy of the sun causes the electrons in the material’s atoms to actually “jump”, creating an electrical current, which can be harnessed. This type of material is used to create a photovoltaic cell (photo = light and voltaic = voltage). One of the most popular materials used to make photovoltaic cells is crystalline silicon. This is what the majority of solar panels are made of.</p>
                 <nav className='science-sun-steps'>
                     <p>Crystalline silicon is often used to generate solar power for the home due to its:</p>
-                    <ul className='sun-steps'>
+                    <ul id='sun-steps'>
                         <li>High efficiency: Silicon can convert up to 22% of sunlight’s energy into electricity</li>
                         <li>Durability: Silicon solar panels can last up to 50 years</li>
                         <li>Minimal care required: Silicon panels are nearly self-sustaining</li>
