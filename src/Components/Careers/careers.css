@@ -11,7 +11,7 @@
 }
 .apply-form{
     width: 70%;
-    height: 80vh;
+    height: 90vh;
     box-sizing: border-box;
     padding: 1%;
     background-color: white;
@@ -21,6 +21,9 @@
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 7px, rgba(0, 0, 0, 0.23) 0px 4px 7px;
     font-family: 'Nunito', sans-serif;
+}
+.apply-form input::placeholder{
+    color: black;
 }
 .apply-header{
     display: flex;
@@ -43,30 +46,37 @@
     width: auto;
 }
 
+.apply-input-wrapper{
+    width: 45%;
+    height: 100%;
+    position: relative;
+    background-color: thistle;
+}
 .apply-form > nav{
-    width: 90%;
+    width: 92%;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
     margin-bottom: 5%;
-    height: 7%;
+    height: 6%;
 }
 .apply-input{
-    width: 45%;
-    border-color: salmon;
-    background-color: peachpuff;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    border: 1px solid tomato;
+    background-color: white;
     font-size: 1vw;
     padding: 1%;
     box-sizing: border-box;
-    transition: .25s;
 }
 .fill-input{
     color: rgb(34, 34, 34);
-    border-color: rgb(252, 89, 60);
+    border: solid tomato 2px;
+    border-radius: 3px;
     background-color: peachpuff;
-    background-color: rgba(255, 218, 185, 0.727);
-    transition: .25s;
-    width: 45%;
+    width: 100%;
+    height: 100%;
     font-size: 1vw;
     padding: 1%;
     box-sizing: border-box;
@@ -78,5 +88,123 @@
     outline: none;
     color: rgb(34, 34, 34);
     border-color: tomato;
-    background-color: rgba(255, 218, 185, 0.727);
+    background-color: peachpuff;
+}
+.input-error{
+    position: absolute;
+    left: 1%;
+    bottom: -80%;
+    display: initial;
+    color: tomato;
+    font-size: .8vw;
+    font-weight: bold;
+}
+.no-error{
+    display: none;
+}
+
+.text-area{
+    width: 92%;
+    height: 45%;
+    border-radius: 3px;
+    border: 1px solid tomato;
+    background-color: white;
+    font-size: 1vw;
+    padding: 1%;
+    box-sizing: border-box;
+    resize: none;
+}
+.fill-text-area{
+    color: rgb(34, 34, 34);
+    border: solid tomato 2px;
+    border-radius: 3px;
+    background-color: peachpuff;
+    width: 92%;
+    height: 45%;
+    font-size: 1vw;
+    padding: 1%;
+    resize: none;
+    box-sizing: border-box;
+}
+.fill-text-area:focus{
+    outline: none;
+}
+.text-area:focus{
+    outline: none;
+    color: rgb(34, 34, 34);
+    border-color: tomato;
+    background-color: peachpuff;
+}
+.text-area::placeholder{
+    color: black;
+}
+
+.apply-button-wrapper{
+    width: 92%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+}
+.apply-button{
+    width: 42%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: 2px solid tomato;
+    color: tomato;
+    font-size: 1vw;
+    font-weight: bold;
+    transition: .25s ease-out;
+    background-color: white;
+}
+.apply-button:hover{
+    color: white;
+    background-color: tomato;
+}
+
+
+.resume-wrapper{
+    display: flex;
+    width: auto;
+    align-items: center;
+}
+.resume-wrapper p{
+    font-size: 1.4vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: tomato;
+    margin-right: 2%;
+}
+.attach-file-button::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+/* .attach-file-button{
+    width: 15%;
+} */
+.attach-file-button:focus{
+    outline: none;
+}
+.attach-file-button::before{
+    content: '+';
+    background: transparent;
+    border: 2px solid tomato;
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1vw;
+    color: tomato;
+    transition: .25s ease-out;
+}
+.attach-file-button:hover::before {
+    background-color: tomato;
+    color: white;
+  }
+.attach-file-button:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }

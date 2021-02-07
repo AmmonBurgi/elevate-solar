@@ -71,3 +71,9 @@
     color: tomato;
     margin-bottom: 2vh;
 }
+
+.talk-quote-form{
+    margin-top: 6vh;
+    width: 70%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 7px, rgba(0, 0, 0, 0.23) 0px 4px 7px;
+}

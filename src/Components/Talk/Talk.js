@@ -1,11 +1,24 @@
 import React, {useEffect, useState} from 'react'
 
 import './talk.css'
+import solarIcon from '../../logo_transparent_background.webp'
 import solarInstal from '../../Solar Panel Installation (1).webp'
 import solarPanels from '../../Solar Panels on Roof.webp'
 
 function Talk(){
-    const [fadeToggle, setFadeToggle] = useState(false)
+    const [fadeToggle, setFadeToggle] = useState(false),
+        [first, setFirst] = useState(''),
+        [last, setLast] = useState(''),
+        [firstStreet, setFirstStreet] = useState(''),
+        [secondStreet, setSecondStreet] = useState(''),
+        [city, setCity] = useState(''),
+        [region, setRegion] = useState(''),
+        [zip, setZip] = useState(''),
+        [country, setCountry] = useState(''),
+        [email, setEmail] = useState(''),
+        [homeOwner, setHomeOwner] = useState(''),
+        [howHear, setHowHear] = useState(''),
+        [phone, setPhone] = useState('')
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -45,7 +58,92 @@ function Talk(){
             </div>
             <div id='hr-border'></div>
             <div className='talk-quote-form'>
-                
+                <div className='quote-header'>
+                    <p>Get a Quote</p>
+                    <img src={solarIcon} alt='elevate solar icon' />
+                </div>
+                <p>Please enter your details below and we'll contact you shortly.</p>
+                <div className='quote-name'>
+                    <p>Name</p>
+                    <nav>
+                        <input
+                        onChange={(e) => setFirst(e.target.value)}
+                        placeholder='First'
+                        />
+                        <input 
+                        onChange={(e) => setLast(e.target.value)}
+                        placeholder='Last' />
+                    </nav>
+                </div>
+                <div className='quote-address' >
+                    <p>Address</p>
+                    <input 
+                    onChange={(e) => setFirstStreet(e.target.value)}
+                    placeholder='Street Address' />
+                    <input 
+                    onChange={(e) => setSecondStreet(e.target.value)}
+                    placeholder='Second Street Address' />
+                    <nav>
+                        <input 
+                        onChange={(e) => setCity(e.target.value)}
+                        placeholder='City' />
+                        <input 
+                        onChange={(e) => setRegion(e.target.value)}
+                        placeholder='Region' />
+                    </nav>
+                    <nav>
+                        <input 
+                        onChange={(e) => setZip(e.target.value)}
+                        placeholder='Postal / Zip Code' />
+                        <input 
+                        onChange={(e) => setCountry(e.target.value)}
+                        placeholder='United States' />
+                    </nav>
+                </div>
+                <div className='quote-email' >
+                    <p>Email</p>
+                    <input
+                    onChange={(e) => setEmail(e.target.value)}
+                    />
+                </div>
+                <div className='quote-homeowner'>
+                    <p>Homeowner?</p>
+                    <nav>
+                        <input
+                        value={'yes'} 
+                        onChange={(e) => setHomeOwner(e.target.value)}
+                        />
+                        <p>Yes</p>
+                    </nav>
+                    <nav>
+                        <input
+                        value={'no'}
+                        onChange={(e) => setHomeOwner(e.target.value)}
+                        />
+                        <p>No</p>
+                    </nav>
+                    <nav>
+                        <input
+                        value={'rent'}
+                        onChange={(e) => setHomeOwner(e.target.value)}
+                        />
+                        <p>Rent</p>
+                    </nav>
+                </div>
+                <div className='quote-how'>
+                    <p>How did you hear about us?</p>
+                    <p>If it was in the online media, on what website was it?</p>
+                    <input
+                    onChange={(e) => setHowHear(e.target.value)}
+                    />
+                </div>
+                <div className='quote-number'>
+                    <p>Phone Number</p>
+                    <input
+                    onChange={(e) => setPhone(e.target.value)}
+                    />
+                </div>
+                <button>Get a Quote</button>
             </div>
         </div>
     )

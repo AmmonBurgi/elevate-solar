@@ -57,37 +57,55 @@ function Careers(){
                     <img alt='elevate-solar-icon' src={solarIcon} />
                 </div>
                 <nav>
-                    <input 
-                    className={nameErr === true ? 'input-error' : (name.length === 0 ? 'apply-input' : 'fill-input')}
-                    value={name} 
-                    onChange={(e) => setName(e.target.value)} 
-                    placeholder='Name' />
-                    <input 
-                    className={emailErr === true ? 'input-error' : (email.length === 0 ? 'apply-input' : 'fill-input')}
-                    value={email} 
-                    onChange={(e) => setEmail(e.target.value)} 
-                    placeholder='Email' />
+                    <div className='apply-input-wrapper'>
+                        <input 
+                        className={name.length === 0 ? 'apply-input' : 'fill-input'}
+                        onChange={(e) => setName(e.target.value)} 
+                        placeholder='Name' />
+                        <p className={nameErr === true ? 'input-error' : 'no-error'}>Name is Invalid!</p>
+                    </div>
+                    <div className='apply-input-wrapper'>
+                        <input 
+                        className={email.length === 0 ? 'apply-input' : 'fill-input'}
+                        value={email} 
+                        onChange={(e) => setEmail(e.target.value)} 
+                        placeholder='Email' />
+                        <p className={emailErr === true ? 'input-error' : 'no-error'}>Email is Invalid!</p>
+                    </div>
                 </nav>
                 <nav>
-                    <input 
-                    className={phoneErr === true ? 'input-error' : (phone.length === 0 ? 'apply-input' : 'fill-input')}
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)} 
-                    placeholder='Phone' />
-                    <input
-                    className={addressErr === true ? 'input-error' : (address.length === 0 ? 'apply-input' : 'fill-input')}
-                    value={address} 
-                    onChange={(e) => setAddress(e.target.value)} 
-                    placeholder='Address' />
+                    <div className='apply-input-wrapper'>
+                        <input 
+                        className={phone.length === 0 ? 'apply-input' : 'fill-input'}
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)} 
+                        placeholder='Phone' />
+                        <p className={phoneErr === true ? 'input-error' : 'no-error'}>Invalid Phone Number!</p>
+                    </div>
+                    <div className='apply-input-wrapper'>
+                        <input
+                        className={address.length === 0 ? 'apply-input' : 'fill-input'}
+                        value={address} 
+                        onChange={(e) => setAddress(e.target.value)} 
+                        placeholder='Address' />
+                        <p className={addressErr === true ? 'input-error' : 'no-error'}>Invalid Address!</p>
+                    </div>
                 </nav>
                 <textarea
-                
-                className={aboutErr === true ? 'textAreaErr' : 'apply-textArea'}
+                className={about.length === 0 ? 'text-area' : 'fill-text-area'}
                 placeholder='Cover Letter For Sales Rep Position...'
                 onChange={(e) => setAbout(e.target.value)}
                 value={about}
                 />
-                <button onClick={handleApply}>Apply Now</button>
+                <div className='apply-button-wrapper'>
+                    <nav className='resume-wrapper'>
+                        <p>Resume: </p>
+                        <input className='attach-file-button' type='file' />
+                    </nav>
+                    <button 
+                    className='apply-button'
+                    onClick={handleApply}>Apply Now</button>
+                </div>
             </div>
         </div>
     )
