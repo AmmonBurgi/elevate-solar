@@ -62,47 +62,59 @@ function Talk(){
                     <p>Get a Quote</p>
                     <img src={solarIcon} alt='elevate solar icon' />
                 </div>
-                <p>Please enter your details below and we'll contact you shortly.</p>
+                <p className='detail-text'>Please enter your details below and we'll contact you shortly.</p>
                 <div className='quote-name'>
-                    <p>Name</p>
-                    <nav>
+                    <p className='quote-label'>Name</p>
+                    <nav className='quote-input-wrapper'>
                         <input
+                        className={first.length === 0 ? 'quote-input' : 'filled-quote-input'}
                         onChange={(e) => setFirst(e.target.value)}
                         placeholder='First'
                         />
                         <input 
+                        className={last.length === 0 ? 'quote-input' : 'filled-quote-input'}
                         onChange={(e) => setLast(e.target.value)}
                         placeholder='Last' />
                     </nav>
                 </div>
                 <div className='quote-address' >
-                    <p>Address</p>
+                    <p className='quote-label'>Address</p>
                     <input 
+                    id='full-input'
+                    className={firstStreet.length === 0 ? 'quote-input' : 'filled-quote-input'} 
                     onChange={(e) => setFirstStreet(e.target.value)}
                     placeholder='Street Address' />
                     <input 
+                    id='full-input'
+                    className={secondStreet.length === 0 ? 'quote-input' : 'filled-quote-input'} 
                     onChange={(e) => setSecondStreet(e.target.value)}
                     placeholder='Second Street Address' />
-                    <nav>
-                        <input 
+                    <nav className='quote-input-wrapper'>
+                        <input
+                        className={city.length === 0 ? 'quote-input' : 'filled-quote-input'} 
                         onChange={(e) => setCity(e.target.value)}
                         placeholder='City' />
                         <input 
+                        className={region.length === 0 ? 'quote-input' : 'filled-quote-input'}
                         onChange={(e) => setRegion(e.target.value)}
                         placeholder='Region' />
                     </nav>
-                    <nav>
+                    <nav className='quote-input-wrapper'>
                         <input 
+                        className={zip.length === 0 ? 'quote-input' : 'filled-quote-input'}
                         onChange={(e) => setZip(e.target.value)}
                         placeholder='Postal / Zip Code' />
                         <input 
+                        className={country.length === 0 ? 'quote-input' : 'filled-quote-input'}
                         onChange={(e) => setCountry(e.target.value)}
                         placeholder='United States' />
                     </nav>
                 </div>
                 <div className='quote-email' >
-                    <p>Email</p>
+                    <p className='quote-label'>Email</p>
                     <input
+                    id='full-input'
+                    className={email.length === 0 ? 'quote-input' : 'filled-quote-input'}
                     onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
@@ -110,36 +122,49 @@ function Talk(){
                     <p>Homeowner?</p>
                     <nav>
                         <input
+                        type='radio'
+                        name='home'
                         value={'yes'} 
                         onChange={(e) => setHomeOwner(e.target.value)}
+                        className='quote-radio-input'
                         />
-                        <p>Yes</p>
+                        <p className='quote-radio-choice'>Yes</p>
                     </nav>
                     <nav>
                         <input
+                        name='home'
+                        type='radio'
                         value={'no'}
                         onChange={(e) => setHomeOwner(e.target.value)}
+                        className='quote-radio-input'
                         />
-                        <p>No</p>
+                        <p className='quote-radio-choice'>No</p>
                     </nav>
                     <nav>
                         <input
+                        name='home'
+                        type='radio'
                         value={'rent'}
                         onChange={(e) => setHomeOwner(e.target.value)}
+                        className='quote-radio-input'
                         />
-                        <p>Rent</p>
+                        <p className='quote-radio-choice'>Rent</p>
                     </nav>
                 </div>
                 <div className='quote-how'>
                     <p>How did you hear about us?</p>
                     <p>If it was in the online media, on what website was it?</p>
-                    <input
+                    <textarea
+                    id='quote-textarea'
+                    className='quote-input'
                     onChange={(e) => setHowHear(e.target.value)}
                     />
                 </div>
                 <div className='quote-number'>
-                    <p>Phone Number</p>
+                    <p className='quote-label'>Phone Number</p>
                     <input
+                    id='full-input'
+                    className={phone.length === 0 ? 'quote-input' : 'filled-quote-input'}
                     onChange={(e) => setPhone(e.target.value)}
                     />
                 </div>

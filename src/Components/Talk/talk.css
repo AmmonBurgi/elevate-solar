@@ -75,5 +75,109 @@
 .talk-quote-form{
     margin-top: 6vh;
     width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 3%;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 7px, rgba(0, 0, 0, 0.23) 0px 4px 7px;
+}
+.talk-quote-form > div{
+    width: 100%;
+}
+.quote-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+.quote-header img{
+    height: 100%;
+    width: auto;
+}
+.quote-header p{
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    color: tomato;
+}
+.detail-text{
+    margin-bottom: 0;
+}
+.quote-label{
+    margin-bottom: 3px;
+    font-size: 1.1vw;
+    color: tomato;
+    font-weight: bold;
+}
+.quote-address{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.quote-input-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.quote-input::placeholder{
+    color: black;
+}
+.quote-input{
+    width: 45%;
+    height: 4vh;
+    border: 1px solid tomato;
+    border-radius: 3px;
+    font-size: 1vw;
+    padding: 1%;
+    box-sizing: border-box;
+    margin-bottom: 2vh;
+}
+.quote-input:focus{
+    outline: none;
+    background-color: peachpuff;
+}
+.filled-quote-input{
+    width: 45%;
+    height: 4vh;
+    border: 2px solid tomato;
+    background-color: peachpuff;
+    border-radius: 3px;
+    font-size: 1vw;
+    padding: 1%;
+    box-sizing: border-box;
+    margin-bottom: 2vh;
+}
+.filled-quote-input:focus{
+    outline: none;
+}
+.quote-homeowner nav{
+    display: flex;
+    align-items: center;
+}
+.quote-radio-input{
+   width: 1vw;
+   height: 1vw;
+}
+.quote-radio-input:focus{
+    background-color: tomato;
+}
+.quote-radio-input:checked{
+    background-color: tomato;
+    color: tomato;
+}
+.quote-radio-choice{
+    font-size: 1vw;
+    margin-left: .5%;
+}
+
+#full-input{
+    width: 100%;
+}
+#quote-textarea{
+    width: 100%;
+    height: 15vh;
+    resize: none;
 }
