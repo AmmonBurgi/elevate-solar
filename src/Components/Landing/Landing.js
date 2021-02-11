@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
-import panelInstall from '../../Solar Panel Installation.webp'
+import panelInstall from '../../Solar-Panel-Installation.webp'
+// import installingPanels from '../../Solar Panel Installation (1).webp'
 import solarIcon from '../../logo_transparent_background.webp'
 import manSolar from '../../Man shows his family the solar panels on.webp'
 import map from '../../map.webp'
@@ -51,6 +52,36 @@ function Landing(props){
                                 <FontAwesomeIcon icon={faLightbulb}></FontAwesomeIcon>
                                 <p>Solar Science</p>
                             </div>
+                        </div>
+                    </div>
+                    <div className='landing-align-nav-tags-phone'>
+                        <div 
+                        onClick={() => props.history.push('/talk')} 
+                        id='nav-one' 
+                        className='landing-nav-tag-phone'>
+                            <FontAwesomeIcon icon={faHandshake}></FontAwesomeIcon>
+                            <p>Talk To Someone</p>
+                        </div>
+                        <div 
+                        onClick={() => props.history.push('/works')} 
+                        id='nav-two' 
+                        className='landing-nav-tag-phone'>
+                            <FontAwesomeIcon icon={faBoxOpen}></FontAwesomeIcon>
+                            <p>How It Works</p>
+                        </div>
+                        <div 
+                        onClick={() => props.history.push('/careers')} 
+                        id='nav-three' 
+                        className='landing-nav-tag-phone'>
+                            <FontAwesomeIcon icon={faGraduationCap}></FontAwesomeIcon>
+                            <p>Careers</p>
+                        </div>
+                        <div 
+                        onClick={() => props.history.push('/science')} 
+                        id='nav-four' 
+                        className='landing-nav-tag-phone'>
+                            <FontAwesomeIcon icon={faLightbulb}></FontAwesomeIcon>
+                            <p>Solar Science</p>
                         </div>
                     </div>
                 </div>

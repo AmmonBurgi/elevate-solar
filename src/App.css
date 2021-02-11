@@ -38,8 +38,6 @@
 @media(max-width: 425px){
   .app-component{
     width: 100vw;
-    padding-right: 2vw;
-    padding-left: 2vw;
     box-sizing: border-box;
   }
   #hr-border{

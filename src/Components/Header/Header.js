@@ -54,14 +54,19 @@ function Header(props){
                 <div className={toggleMenu === false ? 'no-drop-menu' : 'drop-menu'}>
                     <div className={toggleMenu === false ? 'no-drop-links' : 'drop-links'}>
                         <Link 
+                        onClick={() => setToggleMenu(!toggleMenu)}
                         className={history.location.pathname === '/' ? 'drop-current-nav' : 'drop-nav-text'} to='/'>Home</Link>
                         <Link 
+                        onClick={() => setToggleMenu(!toggleMenu)}
                         className={history.location.pathname === '/works' ? 'drop-current-nav' : 'drop-nav-text'} to='/works'>How It Works</Link>
                         <Link 
+                        onClick={() => setToggleMenu(!toggleMenu)}
                         className={history.location.pathname === '/talk' ? 'drop-current-nav' : 'drop-nav-text'} to='/talk'>Talk To Someone</Link>
                         <Link 
+                        onClick={() => setToggleMenu(!toggleMenu)}
                         className={history.location.pathname === '/careers' ? 'drop-current-nav' : 'drop-nav-text'} to='/careers'>Careers</Link>
                         <Link 
+                        onClick={() => setToggleMenu(!toggleMenu)}
                         className={history.location.pathname === '/science' ? 'drop-current-nav' : 'drop-nav-text'} to='/science'>Solar Science</Link>
                     </div>
                 </div>

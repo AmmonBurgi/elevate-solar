@@ -202,3 +202,111 @@
 #no-margin{
     margin-bottom: 0;
 }
+
+@media (max-width: 425px){
+    .talk-top-first{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .talk-top-first img{
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        margin-left: 0;
+    }
+    .talk-first-text p{
+        font-size: 3.3vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+    #talk-first-last-title{
+        font-size: 6vw;
+        margin-right: 2vw;
+        margin-left: 2vw;
+        margin-bottom: 0;
+        margin-top: 2vh;
+    }
+    .talk-top-last{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .talk-top-last img{
+        margin-top: 1vh;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        border-radius: 0;
+    }
+    .talk-top-last p{
+        font-size: 3.3vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-bottom: 0;
+    }
+
+    #talk-text-section-title{
+        font-size: 6vw;
+        margin-right: 2vw;
+        margin-left: 2vw;
+        margin-bottom: 0;
+    }
+    #talk-text-subtitle{
+        font-size: 4.5vw;
+        margin-right: 2vw;
+        margin-left: 2vw;
+        margin-bottom: 0;
+    }
+    .talk-top-text-section p{
+        font-size: 3vw;
+        margin-right: 2vw;
+        margin-left: 2vw;
+    }
+
+    .talk-quote-form{
+        width: 100%;
+        border-radius: 0;
+        margin-bottom: 2vh;
+    }
+    .quote-header{
+        height: 5vh;
+        margin-bottom: 1vh;
+    }
+    .quote-header p{
+        font-size: 5vw;
+    }
+    .detail-text{
+        font-size: 2.7vw;
+    }
+    .quote-input-wrapper{
+        flex-direction: column;
+    }
+    .quote-label{
+        font-size: 4vw;
+    }
+    .quote-input{
+        width: 100%;
+        font-size: 3vw;
+    }
+    .filled-quote-input{
+        width: 100%;
+        font-size: 3vw;
+    }
+    .quote-radio-input{
+        width: 4vw;
+        height: 4vw;
+    }
+    .quote-radio-choice{
+        font-size: 3vw;
+    }
+    .quote-sub-label{
+        font-size: 2.7vw;
+    }
+    #quote-textarea{
+        font-size: 3vw;
+    }
+    .quote-button button{
+        width: 50%;
+        font-size: 3.5vw;
+        margin-bottom: 1vh;
+    }
+}

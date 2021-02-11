@@ -57,6 +57,10 @@
     width: 10%;
     height: auto;
     margin: 0;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-right{
@@ -71,6 +75,9 @@
 }
 
 @media (max-width: 425px){
+    .footer-component{
+        margin-top: 3vh;
+    }
     .footer-main{
         width: 100%;
         padding-right: 2vw;
@@ -82,6 +89,21 @@
         width: auto;
     }
     .footer-follow p{
-        font-size: 4vw;
+        font-size: 3vw;
+    }
+    .footer-follow a{
+        font-size: 2.5vw;
+    }
+    .footer-location p:first-child{
+        font-size: 3vw;
+    }
+    .footer-location p:last-child{
+        font-size: 2.5vw;
+    }
+    .footer-right{
+        width: 30%;
+    }
+    .footer-right p{
+        font-size: 2.5vw;
     }
 }
