@@ -77,3 +77,42 @@
     margin-bottom: 2vh;
     color: tomato;
 }
+
+@media (max-width: 425px){
+    .works-top-section p{
+        font-size: 3vw;
+    }
+    .works-top-list{
+        font-size: 3.5vw;
+        margin-bottom: 1vh;
+    }
+    .works-bottom-section p{
+        font-size: 3.5vw;
+    }
+    #works-afford-title{
+        font-size: 5vw;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    #works-bottom-title{
+        font-size: 5vw;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    #works-list-title{
+        font-size: 5vw;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    #works-top-title{
+        font-size: 6vw;
+    }
+    #works-bottom-prof{
+        font-size: 5vw;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .works-bottom-section nav img{
+        width: 80%;
+    }
+}

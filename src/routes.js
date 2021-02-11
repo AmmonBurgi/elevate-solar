@@ -5,6 +5,7 @@ import HowItWorks from './Components/HowItWorks/HowItWorks'
 import Landing from './Components/Landing/Landing'
 import Science from './Components/Science/Science'
 import Talk from './Components/Talk/Talk'
+import Book from './Components/Book/Book'
 
 export default(
     <Switch>
@@ -13,5 +14,6 @@ export default(
         <Route path='/works' component={HowItWorks} />
         <Route path='/science' component={Science} />
         <Route path='/talk' component={Talk} />
+        <Route path='/book' component={Book} />
     </Switch>
 )

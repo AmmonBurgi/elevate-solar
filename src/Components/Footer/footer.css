@@ -69,3 +69,19 @@
         width: 75%;
     }
 }
+
+@media (max-width: 425px){
+    .footer-main{
+        width: 100%;
+        padding-right: 2vw;
+        padding-left: 2vw;
+        box-sizing: border-box;
+    }
+    .footer-main img{
+        height: 80%;
+        width: auto;
+    }
+    .footer-follow p{
+        font-size: 4vw;
+    }
+}

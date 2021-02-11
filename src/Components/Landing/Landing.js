@@ -9,7 +9,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faHandshake} from '@fortawesome/free-solid-svg-icons'
 import {faBoxOpen} from '@fortawesome/free-solid-svg-icons'
 import {faLightbulb} from '@fortawesome/free-solid-svg-icons'
-import {faInfoCircle} from '@fortawesome/free-solid-svg-icons'
+import {faGraduationCap} from '@fortawesome/free-solid-svg-icons'
 import './landing.css'
 
 function Landing(props){
@@ -42,8 +42,8 @@ function Landing(props){
                         </div>
                         <div id='landing-nav-second-border' className='landing-nav-tags'>
                             <div onClick={() => props.history.push('/careers')}>
-                                <FontAwesomeIcon icon={faInfoCircle}></FontAwesomeIcon>
-                                <p>About</p>
+                                <FontAwesomeIcon icon={faGraduationCap}></FontAwesomeIcon>
+                                <p>Careers</p>
                             </div>
                         </div>
                         <div className='landing-nav-tags'>
@@ -66,7 +66,7 @@ function Landing(props){
                     {/* </div> */}
                     <div className='landing-meet-button'>
                         <p>Let's Meet</p>
-                        <button>Book Now</button>
+                        <button onClick={() => props.history.push('/book')}>Book Now</button>
                     </div>
                 </div>
             </section>
