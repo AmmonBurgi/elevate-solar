@@ -44,7 +44,7 @@ function Header(props){
                     <p className={history.location.pathname === '/science' ? 'white-nav-text' : 'header-nav-text'}>Solar Science</p>
                     <div className={history.location.pathname === '/science' ? 'absolute-home-color' : 'absolute-front-color'}></div>
                 </Link>
-                <p className='header-contact'>Contact US 850-905-0115</p>
+                <p className='header-contact'>Contact US (850-905-0115)</p>
             </section>
             <section className='header-drop-menu'>
                 <div className={toggleMenu === false ? 'header-icon-wrapper' : 'fixed-icon-wrapper'}>
@@ -52,6 +52,7 @@ function Header(props){
                     <FontAwesomeIcon onClick={() => setToggleMenu(!toggleMenu)} className={toggleMenu === false ? 'drop-menu-icon' : 'no-drop-menu-icon'} icon={faBars}></FontAwesomeIcon>
                 </div>
                 <div className={toggleMenu === false ? 'no-drop-menu' : 'drop-menu'}>
+                    <p className={toggleMenu === false ? 'no-contact-drop-down' : 'contact-drop-down'}>Contact US (850-905-0115)</p>
                     <div className={toggleMenu === false ? 'no-drop-links' : 'drop-links'}>
                         <Link 
                         onClick={() => setToggleMenu(!toggleMenu)}

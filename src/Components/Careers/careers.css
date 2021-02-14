@@ -50,7 +50,6 @@
     width: 45%;
     height: 100%;
     position: relative;
-    background-color: thistle;
 }
 .apply-form > nav{
     width: 92%;
@@ -207,4 +206,106 @@
   }
 .attach-file-button:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+@media(max-width: 425px){
+    .apply-form{
+        width: 100%;
+        border-radius: 0;
+        margin-bottom: 1vh;
+    }
+    .apply-header p{
+        font-size: 7vw;
+    }
+    .apply-form > nav{
+        flex-direction: column;
+        height: 20%;
+        margin-bottom: 0;
+    }
+    .apply-input{   
+        font-size: 3vw;
+        margin-bottom: 1vh;
+    }
+    .fill-input{
+        font-size: 3vw;
+    }
+    .input-error{
+        font-size: 3vw;
+        bottom: -90%;
+    }
+    .apply-input-wrapper{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 6%;
+    }
+    .text-area{
+        font-size: 3vw;
+        height: 30%;
+    }
+    .fill-text-area{
+        font-size: 3vw;
+        height: 30%;
+    }
+    .apply-button-wrapper{
+        margin-bottom: 0;
+    }
+    .apply-button{
+        width: 50%;
+        font-size: 4vw;
+    }
+    .resume-wrapper{
+        width: 40%;
+    }
+}
+
+
+@media(max-height: 425px){
+    .apply-form{
+        height: 200vh;
+        width: 100%;
+        border-radius: 0;
+        margin-bottom: 1vh;
+    }
+    .apply-header p{
+        font-size: 7vw;
+    }
+    .apply-form > nav{
+        flex-direction: column;
+        height: 30%;
+        margin-bottom: 0;
+    }
+    .apply-input{   
+        font-size: 3vw;
+        margin-bottom: 1vh;
+    }
+    .fill-input{
+        font-size: 3vw;
+    }
+    .input-error{
+        font-size: 3vw;
+        bottom: -90%;
+    }
+    .apply-input-wrapper{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 6%;
+    }
+    .text-area{
+        font-size: 3vw;
+        height: 30%;
+    }
+    .fill-text-area{
+        font-size: 3vw;
+        height: 30%;
+    }
+    .apply-button-wrapper{
+        margin-bottom: 0;
+    }
+    .apply-button{
+        width: 50%;
+        font-size: 4vw;
+    }
+    .resume-wrapper{
+        width: 40%;
+    }
 }

@@ -134,7 +134,7 @@
     }
   }
 
-@media(max-width: 425px){
+@media(max-width: 425px ){
     .header-component{
         width: 100%;
         justify-content: space-between;
@@ -270,6 +270,194 @@
         font-weight: bold;
         text-decoration: none;
         color: tomato;
+    }
+    .no-contact-drop-down{
+        transition: .5s;
+        opacity: 0;
+        top: 3vh;
+        text-transform: uppercase;
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        font-size: 5vw;
+    }
+    .contact-drop-down{
+        text-transform: uppercase;
+        font-size: 5vw;
+        transition: .5s;
+        transition-delay: .25s;
+        opacity: 1;
+        color: black;
+        font-weight: bold;
+        top: 3vh;
+        position: absolute;
+    }
+    #exit-icon{
+        font-size: 9vw;
+        position: absolute;
+    }
+}
+
+@media(max-height: 425px){
+    .header-component{
+        width: 96vw;
+        height: 20vh;
+    }
+    .header-right-section{
+        display: none;
+    }
+   .header-left-section{
+        width: auto;
+        height: 100%;
+        align-items: center;
+    } 
+    .header-left-section img{
+        margin-top: 1vh;
+        height: 100%;
+        width: auto;
+    }
+    .header-icon-text{
+        margin-top: 4vh;
+    }
+    .header-icon-text hr{
+        margin-top: .5vh;
+        margin-bottom: .5vh;
+    }
+    .header-icon-title{
+        font-size: 3vw;
+    }
+    .header-title-second{
+        font-size: 1.7vw;
+    }
+    .header-title-third{
+        font-size: 1.7vw;
+    }
+
+    .header-drop-menu{
+        display: initial;
+    }
+    .header-icon-wrapper{
+        position: absolute;
+        transition: .25s;
+        padding: 1%;
+        top: 3.5vh;
+        right: 4vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border: 2px solid tomato;
+        border-radius: 10px;
+        z-index: 505;
+    }
+    .fixed-icon-wrapper{
+        position: fixed;
+        padding: 1%;
+        top: 3.5vh;
+        right: 4vw;
+        transition: .25s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border: 2px solid tomato;
+        border-radius: 10px;
+        z-index: 505;
+    }
+    .drop-menu-icon{
+        color: tomato;
+        font-size: 6.5vw;
+        opacity: 1;
+        transition: .25s ease-in;
+    }
+    .no-drop-menu-icon{
+        color: tomato;
+        font-size: 6.5vw;
+        opacity: 0;
+        transition: .25s ease-out;
+        transform: rotate(45deg);
+    }
+    .drop-menu{
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: 500;
+        background-color: rgb(255, 207, 192);
+        transition: .25s ease-out;
+        opacity: 1;
+        display: flex;
+        align-items: center;  
+        box-sizing: border-box;
+        padding-left: 4vw;
+    }
+    .no-drop-menu{
+        top: 0;
+        right: 0;
+        height: 100vh;
+        position: fixed;
+        z-index: 500;
+        background-color: peachpuff;
+        transition: .25s ease-in;
+        opacity: .2;
+        width: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;  
+    }
+    .drop-links{
+        opacity: 1;
+        transition: .5s;
+        transition-delay: .25s;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: space-evenly;
+    }
+    .no-drop-links{
+        opacity: 0;
+        transition: .5s;
+        /* transition-delay: .25s; */
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: space-evenly;
+    }
+    .drop-nav-text{
+        font-size: 3.5vw;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    }
+    .drop-current-nav{
+        font-size: 3.5vw;
+        font-weight: bold;
+        text-decoration: none;
+        color: tomato;
+    }
+    .no-contact-drop-down{
+        transition: .5s;
+        opacity: 0;
+        top: 0;
+        text-transform: uppercase;
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        font-size: 3.5vw;
+    }
+    .contact-drop-down{
+        text-transform: uppercase;
+        font-size: 3.5vw;
+        transition: .5s;
+        transition-delay: .25s;
+        opacity: 1;
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
     }
     #exit-icon{
         font-size: 9vw;

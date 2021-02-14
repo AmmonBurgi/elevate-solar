@@ -107,3 +107,35 @@
         font-size: 2.5vw;
     }
 }
+
+@media(max-height: 425px){
+    .footer-component{
+        height: 20vh;
+    }
+    .footer-main{
+        width: 96%;
+    }
+    .footer-right p{
+        font-size: 1.5vw;
+    }
+    .footer-location p:first-child{
+        font-size: 1.7vw;
+    }
+    .footer-location p:last-child{
+        font-size: 1.5vw;
+    }
+    .footer-follow p{
+        font-size: 1.7vw;
+    }
+    .footer-follow a{
+        font-size: 1.5vw;
+    }
+    .footer-main{
+        position: relative;
+    }
+    .footer-main img{
+        height: 100%;
+        width: auto;
+        position: absolute;
+    }
+}

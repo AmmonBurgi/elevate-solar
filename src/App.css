@@ -45,3 +45,9 @@
     margin-top: 2vh;
   }
 }
+
+@media(max-height: 425px){
+  .app-component{
+    width: 100vw;
+  }
+}
