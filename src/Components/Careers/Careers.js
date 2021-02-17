@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import {Helmet} from 'react-helmet'
 
 import './careers.css'
 import solarIcon from '../../logo_transparent_background.webp'
@@ -51,6 +52,9 @@ function Careers(){
 
     return (
         <div className={fadeToggle === false ? 'no-career' : 'career-component'}>
+            <Helmet>
+                <title>Elevate Solar: Careers</title>
+            </Helmet>
             <div className='apply-form'>
                 <div className='apply-header'>
                     <p>Apply Today!</p>

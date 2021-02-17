@@ -78,6 +78,30 @@
     color: tomato;
 }
 
+@media(max-width: 1280px){
+    .works-top-section p{
+        font-size: 1.5vw;
+    }
+    #works-list-title{
+        font-size: 2vw;
+    }
+    .works-top-list{
+        font-size: 1.5vw;
+    }
+    #works-afford-title{
+        font-size: 2.3vw;
+    }
+    .works-bottom-section p{
+        font-size: 1.5vw;
+    }
+    #works-bottom-title{
+        font-size: 2.3vw;
+    }
+    #works-bottom-prof{
+        font-size: 2.3vw;
+    }
+}
+
 @media (max-width: 425px){
     .works-top-section p{
         font-size: 3vw;

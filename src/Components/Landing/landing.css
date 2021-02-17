@@ -256,6 +256,37 @@
    height: auto;
 }
 
+@media(max-width: 1280px){
+    .landing-bottom-section > p{
+        font-size: 2.1vw;
+    }
+    .landing-saving-title{
+        font-size: 2.3vw;
+    }
+    .landing-saving-first{
+        font-size: 1.6vw;
+    }
+    .landing-saving-last{
+        font-size: 1.6vw;
+    }
+
+    .why-text-first{
+        font-size: 1.3vw;
+    }
+    .why-text-last{
+        font-size: 1.3vw;
+    }
+    .landing-btm-nation{
+        font-size: 1.3vw;
+    }
+    .landing-btm-map-title{
+        font-size: 2.8vw;
+    }
+    .landing-btm-map-text{
+        font-size: 1.5vw;
+    }
+}
+
 @media (max-width: 425px){
     .landing-nav-links > img{
         border-radius: 0;

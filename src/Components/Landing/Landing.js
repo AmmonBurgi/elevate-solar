@@ -12,6 +12,7 @@ import {faBoxOpen} from '@fortawesome/free-solid-svg-icons'
 import {faLightbulb} from '@fortawesome/free-solid-svg-icons'
 import {faGraduationCap} from '@fortawesome/free-solid-svg-icons'
 import './landing.css'
+import { Helmet } from 'react-helmet'
 
 function Landing(props){
     const [fadeToggle, setFadeToggle] = useState(false)
@@ -25,6 +26,9 @@ function Landing(props){
 
     return(
         <div className={fadeToggle === false ? 'no-landing' : 'landing-component'}>
+            <Helmet>
+                <title>Elevate Solar: Solar Consulting Firm</title>
+            </Helmet>
             <section className='landing-top-section'>
                 <div className='landing-nav-links'>
                     <img alt='Panel Installing' src={panelInstall} />

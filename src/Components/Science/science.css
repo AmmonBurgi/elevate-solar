@@ -192,3 +192,82 @@
         margin-left: 2vw;
     }
 }
+
+
+@media(max-height: 425px){
+    #science-title{
+        font-size: 6vw;
+        margin-right: 2vw;
+        margin-left: 2vw;
+        margin-bottom: 1vh;
+    }
+    #science-subtitle{
+        font-size: 4vw;
+        margin-right: 2vw;
+        margin-left: 2vw;
+        margin-bottom: 0;
+    }
+    .science-steps{
+        margin-bottom: 0;
+    }
+    .science-steps-section > p{
+        font-size: 3vw;
+        margin-right: 2vw;
+        margin-left: 2vw;
+    }
+    .science-steps-description{
+        font-size: 2.8vw;
+    }
+    .align-all-steps{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .align-all-steps img{
+        width: 100%;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        height: auto;
+    }
+    .science-align-top-steps{
+        display: none;
+    }
+    .science-step-phone{
+        display: initial;
+    }
+    .science-align-bottom-steps p{
+        font-size: 3vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+    #science-step-subtitles{
+        font-size: 4vw;
+        margin-bottom: 0;
+    }
+
+    .science-sun-section > p{
+        font-size: 3vw;
+        margin-right: 2vw;
+        margin-left: 2vw;
+    }
+    .science-sun-steps > p{
+        font-size: 3.5vw;
+        margin-right: 2vw;
+        margin-left: 2vw;
+    }
+    #sun-steps{
+        font-size: 2.9vw;
+    }
+
+    .science-eco-section p{
+        font-size: 3vw;
+        margin-right: 2vw;
+        margin-left: 2vw;
+    }
+
+    .science-direct-section p{
+        font-size: 3vw;
+        margin-right: 2vw;
+        margin-left: 2vw;
+    }
+}

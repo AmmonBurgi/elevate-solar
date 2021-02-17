@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import {Helmet} from 'react-helmet'
 
 import './howitworks.css'
 import map from '../../map.webp'
@@ -15,6 +16,9 @@ function HowItWorks(){
 
     return( 
         <div className={fadeToggle === false ? 'no-works' : 'works-component'}>
+            <Helmet>
+                <title>Elevate Solar: How It Works</title>
+            </Helmet>
             <div className='works-top-section'>
                 <p id='works-top-title'>Here's how it works!</p>
                 <p>You know how AT&T® or Verizon® will give you a FREE Smartphone if you sign a 2 year contract with their company? They factor in the price of the phone into the contract. After the contract is complete, you own the phone. </p>

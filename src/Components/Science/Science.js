@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import {Helmet} from 'react-helmet'
 
 import solarHouse from '../../solar house.webp'
 import './science.css'
@@ -15,6 +16,9 @@ function Science(){
 
     return (
         <div className={fadeToggle === false ? 'no-science' : 'science-component'}>
+            <Helmet>
+                <title>Elevate Solar: Solar Science</title>
+            </Helmet>
             <div className='science-steps-section'>
                 <p id='science-title'>How Solar Power Systems Work!</p>
                 <p id='science-subtitle'>Shining The Light On Solar</p>

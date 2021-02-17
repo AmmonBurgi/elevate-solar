@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import {Helmet} from 'react-helmet'
 
 import './talk.css'
 import solarIcon from '../../logo_transparent_background.webp'
@@ -287,6 +288,10 @@ function Talk(){
 
     return (
         <div className={fadeToggle === false ? 'no-talk' : 'talk-component'}>
+            <Helmet>
+                <title>Elevate Solar: Talk To Someone</title>
+                <meta name='description' content='Elevate Solar contact page' />
+            </Helmet>
             <div className='talk-top-section'>
                 <div className='talk-top-first'>
                     <nav className='talk-first-text'>

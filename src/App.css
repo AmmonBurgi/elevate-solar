@@ -35,6 +35,12 @@
   }
 }
 
+@media(max-width: 1280px){
+  .app-component{
+    width: 85vw;
+  }
+}
+
 @media(max-width: 425px){
   .app-component{
     width: 100vw;
