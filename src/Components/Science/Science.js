@@ -17,7 +17,7 @@ function Science(){
     return (
         <div className={fadeToggle === false ? 'no-science' : 'science-component'}>
             <Helmet>
-                <title>Elevate Solar: Solar Science</title>
+                <title>Elevate Solar | Solar Science</title>
             </Helmet>
             <div className='science-steps-section'>
                 <p id='science-title'>How Solar Power Systems Work!</p>

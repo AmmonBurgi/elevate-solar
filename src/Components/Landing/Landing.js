@@ -27,7 +27,7 @@ function Landing(props){
     return(
         <div className={fadeToggle === false ? 'no-landing' : 'landing-component'}>
             <Helmet>
-                <title>Elevate Solar: Solar Consulting Firm</title>
+                <title>Elevate Solar | Solar Consulting Firm | Our Planet, Our Future</title>
             </Helmet>
             <section className='landing-top-section'>
                 <div className='landing-nav-links'>

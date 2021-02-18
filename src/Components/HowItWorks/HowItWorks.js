@@ -17,7 +17,7 @@ function HowItWorks(){
     return( 
         <div className={fadeToggle === false ? 'no-works' : 'works-component'}>
             <Helmet>
-                <title>Elevate Solar: How It Works</title>
+                <title>Elevate Solar | How It Works</title>
             </Helmet>
             <div className='works-top-section'>
                 <p id='works-top-title'>Here's how it works!</p>

@@ -53,7 +53,7 @@ function Careers(){
     return (
         <div className={fadeToggle === false ? 'no-career' : 'career-component'}>
             <Helmet>
-                <title>Elevate Solar: Careers</title>
+                <title>Elevate Solar | Careers</title>
             </Helmet>
             <div className='apply-form'>
                 <div className='apply-header'>
