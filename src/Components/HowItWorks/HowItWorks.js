@@ -18,6 +18,7 @@ function HowItWorks(){
         <div className={fadeToggle === false ? 'no-works' : 'works-component'}>
             <Helmet>
                 <title>Elevate Solar | How It Works</title>
+                <meta name='description' content="Want to know more about the benefits of being a customer here at Elevate Solar Energy? Here's how it works!"  />
             </Helmet>
             <div className='works-top-section'>
                 <p id='works-top-title'>Here's how it works!</p>

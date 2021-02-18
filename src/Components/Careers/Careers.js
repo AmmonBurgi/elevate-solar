@@ -54,6 +54,7 @@ function Careers(){
         <div className={fadeToggle === false ? 'no-career' : 'career-component'}>
             <Helmet>
                 <title>Elevate Solar | Careers</title>
+                <meta name='description' content='Want a career in the solar industry? Apply at Elevate Solar Energy today!' />
             </Helmet>
             <div className='apply-form'>
                 <div className='apply-header'>

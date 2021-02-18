@@ -28,6 +28,7 @@ function Landing(props){
         <div className={fadeToggle === false ? 'no-landing' : 'landing-component'}>
             <Helmet>
                 <title>Elevate Solar | Solar Consulting Firm | Our Planet, Our Future</title>
+                <meta name='description' content='Here at Elevate Solar Energy, we understand the importance of renewable energy and make it simple for customers to make the switch with no debt and up-front costs.' />
             </Helmet>
             <section className='landing-top-section'>
                 <div className='landing-nav-links'>

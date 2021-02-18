@@ -290,7 +290,7 @@ function Talk(){
         <div className={fadeToggle === false ? 'no-talk' : 'talk-component'}>
             <Helmet>
                 <title>Elevate Solar | Talk To Someone</title>
-                <meta name='description' content='Elevate Solar contact page' />
+                <meta name='description' content='Get a Quote today! Fill out some details and we at Elevate Solar Energy will contact you shortly.' />
             </Helmet>
             <div className='talk-top-section'>
                 <div className='talk-top-first'>
