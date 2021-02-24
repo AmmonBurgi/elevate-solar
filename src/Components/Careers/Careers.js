@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Helmet} from 'react-helmet'
+import axios from 'axios'
 
 import './careers.css'
 import solarIcon from '../../logo_transparent_background.webp'
@@ -26,6 +27,7 @@ function Careers(){
 
 
     const handleApply = () => {
+        console.log(name, email, phone, address, about)
         setNameErr(false)
         setEmailErr(false)
         setPhoneErr(false)
@@ -47,6 +49,10 @@ function Careers(){
         if(about.length === 0){
             return setAboutErr(true)
         }
+        axios.post('/api/mail/career', {name, email, phone, address, about})
+        .then(res => console.log(res.data.response))
+        .catch(err => console.log(err))
+
     }
 
 
