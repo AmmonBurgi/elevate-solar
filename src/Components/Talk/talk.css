@@ -202,6 +202,17 @@
 #no-margin{
     margin-bottom: 0;
 }
+.quote-input-err{
+    font-size: 1vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    color: tomato;
+    display: initial;
+}
+.no-error{
+    display: none;
+}
 
 @media (max-width: 425px){
     .talk-top-first{

@@ -5,6 +5,7 @@ import './talk.css'
 import solarIcon from '../../logo_transparent_background.webp'
 import solarInstal from '../../Solar Panel Installation (1).webp'
 import solarPanels from '../../Solar Panels on Roof.webp'
+import axios from 'axios'
 
 function Talk(){
     const [fadeToggle, setFadeToggle] = useState(false),
@@ -19,7 +20,18 @@ function Talk(){
         [email, setEmail] = useState(''),
         [homeOwner, setHomeOwner] = useState(''),
         [howHear, setHowHear] = useState(''),
-        [phone, setPhone] = useState('')
+        [phone, setPhone] = useState(''),
+        [firstError, setFirstError] = useState(false),
+        [lastError, setLastError] = useState(false),
+        [firstStreetError, setFirstStreetError] = useState(false),
+        [secondStreetError, setSecondStreetError] = useState(false),
+        [cityError, setCityError] = useState(false),
+        [regionError, setRegionError] = useState(false),
+        [zipError, setZipError] = useState(false),
+        [countryError, setCountryError] = useState(false),
+        [emailError, setEmailError] = useState(false),
+        [homeOwnerError, setHomeOwnerError] = useState(false),
+        [phoneError, setPhoneError] = useState(false)
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -286,6 +298,59 @@ function Talk(){
         )
     })
 
+    const handleQuoteForm = () => {
+
+        setFirstError(false)
+        setLastError(false)
+        setFirstStreet(false)
+        setSecondStreetError(false)
+        setCityError(false)
+        setRegionError(false)
+        setZipError(false)
+        setCountryError(false)
+        setEmailError(false)
+        setHomeOwnerError(false)
+        setPhoneError(false)
+
+        if(first.length === 0){
+            return setFirstError(true)
+        }
+        if(last.length === 0) {
+            return setLastError(true)
+        }
+        if(firstStreet.length === 0) {
+            return setFirstStreet(true)
+        }
+        if(secondStreet.length === 0 ){
+            return setSecondStreetError(true)
+        }
+        if(city.length === 0){
+            return setCityError(true)
+        }
+        if(region.length === 0){
+            return setRegionError(true)
+        }
+        if(zip.length === 0){
+            return setZipError(true)
+        }
+        if(country.length === 0){
+            return setCountryError(true)
+        }
+        if(email.length === 0){
+            return setEmailError(true)
+        }
+        if(homeOwner.length === 0){
+            return setHomeOwnerError(true)
+        }
+        if(phone.length === 0){
+            return setPhoneError(true)
+        }
+
+        axios.post('/api/mail/quote', {first, last, firstStreet, secondStreet, city, region, zip, country, email, homeOwner, howHear, phone})
+        .then(res => console.log(res.data.response))
+        .catch(err => console.log(err))
+    }
+
     return (
         <div className={fadeToggle === false ? 'no-talk' : 'talk-component'}>
             <Helmet>
@@ -339,6 +404,8 @@ function Talk(){
                         placeholder='Last' />
                     </nav>
                 </div>
+                <p className={firstError === true ? 'quote-input-err' : 'no-error'}>Invalid First Name!</p>
+                <p className={lastError === true ? 'quote-input-err' : 'no-error'}>Invalid Last Name!</p>
                 <div className='quote-address' >
                     <p className='quote-label'>Address</p>
                     <input 
@@ -375,6 +442,12 @@ function Talk(){
                         </select>
                     </nav>
                 </div>
+                <p className={firstStreetError === true ? 'quote-input-err' : 'no-error'}>Invalid Street Address!</p>
+                <p className={secondStreetError === true ? 'quote-input-err' : 'no-error'}>Invalid Second Street Address!</p>
+                <p className={cityError === true ? 'quote-input-err' : 'no-error'}>Invalid City!</p>
+                <p className={regionError === true ? 'quote-input-err' : 'no-error'}>Invalid Region!</p>
+                <p className={zipError === true ? 'quote-input-err' : 'no-error'}>Invalid Zip!</p>
+                <p className={countryError === true ? 'quote-input-err' : 'no-error'}>Invalid Country!</p>
                 <div className='quote-email' >
                     <p className='quote-label'>Email</p>
                     <input
@@ -383,6 +456,7 @@ function Talk(){
                     onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
+                <p className={emailError === true ? 'quote-input-err' : 'no-error'}>Invalid Email!</p>
                 <div className='quote-homeowner'>
                     <p id='no-margin' className='quote-label'>Homeowner?</p>
                     <nav>
@@ -416,6 +490,7 @@ function Talk(){
                         <p className='quote-radio-choice'>Rent</p>
                     </nav>
                 </div>
+                <p className={homeOwnerError === true ? 'quote-input-err' : 'no-error'}>Are you a homeowner?</p>
                 <div className='quote-how'>
                     <p id='no-margin' className='quote-label'>How did you hear about us?</p>
                     <p className='quote-sub-label'>If it was in the online media, on what website was it?</p>
@@ -433,8 +508,9 @@ function Talk(){
                     onChange={(e) => setPhone(e.target.value)}
                     />
                 </div>
+                <p className={phoneError === true ? 'quote-input-err' : 'no-error'}>Invalid Phone!</p>
                 <div className='quote-button'>
-                    <button >Get Quote</button>
+                    <button onClick={handleQuoteForm} >Get Quote</button>
                 </div>
             </div>
         </div>

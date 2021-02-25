@@ -10,6 +10,7 @@ const express = require('express'),
 
     // SendGrid Endpoints
     app.post('/api/mail/career', mailCtrl.careerMail)
+    app.post('/api/mail/quote', mailCtrl.quote)
     // massive({
     //     connectionString: CONNECTION_STRING,
     //     ssl: {rejectUnauthorized: false}

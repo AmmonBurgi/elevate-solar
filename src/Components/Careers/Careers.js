@@ -16,7 +16,9 @@ function Careers(){
         [emailErr, setEmailErr] = useState(false),
         [phoneErr, setPhoneErr] = useState(false),
         [addressErr, setAddressErr] = useState(false),
-        [aboutErr, setAboutErr] = useState(false)
+        [aboutErr, setAboutErr] = useState(false),
+        [resumeFile, setResumeFile] = useState(null),
+        [baseFile64, setBaseFile64] = useState('')
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -25,9 +27,26 @@ function Careers(){
         return () => clearTimeout(timer)
       }, [])
 
+    const encodeFileBase = (file) => {
+        console.log(resumeFile[0])
+        const reader = new FileReader();
+        if(file){
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+                const base64 = reader.result;
+                setBaseFile64(base64)
+            };
+            reader.onerror = (error) => {
+                console.log(error)
+            }
+        }
+    }
 
-    const handleApply = () => {
-        console.log(name, email, phone, address, about)
+    const handleApply = async () => {
+        const resumeType = resumeFile.type,
+            resumeName = resumeFile.name
+
+        encodeFileBase(resumeFile)
         setNameErr(false)
         setEmailErr(false)
         setPhoneErr(false)
@@ -49,12 +68,12 @@ function Careers(){
         if(about.length === 0){
             return setAboutErr(true)
         }
-        axios.post('/api/mail/career', {name, email, phone, address, about})
+        console.log(baseFile64)
+        axios.post('/api/mail/career', {name, email, phone, address, about, baseFile64, resumeName, resumeType})
         .then(res => console.log(res.data.response))
         .catch(err => console.log(err))
 
     }
-
 
     return (
         <div className={fadeToggle === false ? 'no-career' : 'career-component'}>
@@ -111,7 +130,7 @@ function Careers(){
                 <div className='apply-button-wrapper'>
                     <nav className='resume-wrapper'>
                         <p>Resume: </p>
-                        <input className='attach-file-button' type='file' />
+                        <input onChange={(e) => setResumeFile(e.target.files[0])} className='attach-file-button' type='file' />
                     </nav>
                     <button 
                     className='apply-button'
