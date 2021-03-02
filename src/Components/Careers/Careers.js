@@ -128,10 +128,13 @@ function Careers(){
                 value={about}
                 />
                 <div className='apply-button-wrapper'>
-                    <nav className='resume-wrapper'>
-                        <p>Resume: </p>
-                        <input onChange={(e) => setResumeFile(e.target.files[0])} className='attach-file-button' type='file' />
-                    </nav>
+                    <div className='full-resume-wrapper'>
+                        <nav className='resume-wrapper'>
+                            <button className='fake-file-button'>Resume:</button>
+                            <input onChange={(e) => setResumeFile(e.target.files[0])} className='attach-file-button' type='file' />
+                        </nav>
+                        <p className='file-name'>{resumeFile !== null ? resumeFile.name : null}</p>
+                    </div>
                     <button 
                     className='apply-button'
                     onClick={handleApply}>Apply Now</button>

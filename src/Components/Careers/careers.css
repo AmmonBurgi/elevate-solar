@@ -161,51 +161,46 @@
     background-color: tomato;
 }
 
-
 .resume-wrapper{
-    display: flex;
-    width: auto;
-    align-items: center;
+    position: relative;
 }
-.resume-wrapper p{
-    font-size: 1.4vw;
-    text-transform: uppercase;
+.fake-file-button{
+    font-size: 1vw;
+    background-color: white;
+    border: 2px solid tomato;
     font-weight: bold;
     color: tomato;
     margin-right: 2%;
-}
-.attach-file-button::-webkit-file-upload-button {
-    visibility: hidden;
-  }
-/* .attach-file-button{
-    width: 15%;
-} */
-.attach-file-button:focus{
-    outline: none;
-}
-.attach-file-button::before{
-    content: '+';
-    background: transparent;
-    border: 2px solid tomato;
-    display: inline-block;
-    background: linear-gradient(top, #f9f9f9, #e3e3e3);
-    border-radius: 3px;
-    padding: 5px 8px;
-    outline: none;
-    white-space: nowrap;
-    -webkit-user-select: none;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1vw;
-    color: tomato;
     transition: .25s ease-out;
+    z-index: 1;
+    padding: .8vw;
 }
-.attach-file-button:hover::before {
+.fake-file-button:hover{
     background-color: tomato;
-    color: white;
-  }
-.attach-file-button:active::before {
-  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.resume-wrapper input{
+    text-align: right;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+.resume-wrapper input:focus .fake-file-button{
+    background-color: tomato;
+}
+.file-name{
+    margin-left: 10px;
+    color: tomato;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.full-resume-wrapper{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
 @media(max-width: 425px){
