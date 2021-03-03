@@ -1,0 +1,62 @@
+.book-component{
+    width: 100%;
+    opacity: 1;
+    transition: .75s ease-in-out;
+}
+.no-book{
+    opacity: 0;
+}
+.booking-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 7px, rgba(0, 0, 0, 0.23) 0px 4px 7px;
+}
+
+#booking-calendar{
+    width: 90%;
+}
+#booking-calendar .react-calendar{
+    width: 100%;
+    font-size: 1.2vw;
+    border: none;
+}
+#booking-calendar .react-calendar__tile{
+    height: 8vh;
+    text-align: left;
+    font-size: 1.3vw;
+    text-decoration: underline;
+    border: 1px solid black;
+}
+#booking-calendar .react-calendar button:enabled{
+}
+#booking-calendar .react-calendar__tile--active{
+    background-color: tomato;
+    -moz-box-shadow: inset 0 0 7px #000000;
+    -webkit-box-shadow: inset 0 0 7px #000000;
+    box-shadow: inset 0 0 7px #000000;
+}
+#booking-calendar .react-calendar__tile--active:enabled:hover,
+#booking-calendar .react-calendar__tile--active:enabled:focus {
+    background-color: tomato;
+}
+#booking-calendar .react-calendar__tile--now {
+    background-color: peachpuff;
+  }
+#booking-calendar .react-calendar__tile:enabled:hover,
+#booking-calendar .react-calendar__tile:enabled:focus {
+  background-color: tomato;
+}
+#booing-calendar .react-calendar__navigation{
+  border: 1px solid black;
+}
+#booking-calendar .react-calendar__navigation button:enabled:hover,
+#booking-calendar .react-calendar__navigation button:enabled:focus {
+  background-color: tomato;
+  color: white;
+}
