@@ -18,6 +18,9 @@
   transition: .5s ease-in-out;
   opacity: 1;
 }
+.app-component button:hover{
+  cursor: pointer;
+}
 .zero{
   opacity: 0;
   transition: .5s;

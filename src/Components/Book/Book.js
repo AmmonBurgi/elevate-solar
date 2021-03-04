@@ -12,6 +12,8 @@ function Book(){
         [timeArray, setTimeArray] = useState(['11:00 am', '11:30 am', '12:00 pm', '12:30 pm', '1:00 pm', '1:30 pm', '2:00 pm', '2:30 pm', '3:00 pm', '3:30 pm', '4:00 pm', '4:30 pm', '5:00 pm']),
         [bookTime, setBookTime] = useState('')
 
+    const today = new Date()
+
     useEffect(() => {
         getAvailableTimes(bookDate)
         const timer = setTimeout(() => {
@@ -21,14 +23,13 @@ function Book(){
     }, [])
 
     const getAvailableTimes = (d) => {
+        setBookTime('')
+
         const date = `${d}`
         const newDate = date.split(' ')
         const format = newDate.map((e,i) => i < 4 ? e : null)
 
-        const today = new Date()
-        const yesterday = new Date(today)
-        yesterday.setDate(yesterday.getDate() - 1)
-        if(d < yesterday){
+        if(d <= today){
             return setTimeArray([])
         }
 
@@ -50,13 +51,23 @@ function Book(){
 
     const timeMap = timeArray.map((element, index) => {
         return (
-            <button onClick={() => setBookTime(element)} className='book-date-buttons' key={index}>{element}</button>
+            <button onClick={() => setBookTime(element)} className={element === bookTime ? 'focus-book-date' : 'book-date-buttons'} key={index}>{element}</button>
         )
     })
+
+    const convertDate = () => {
+        console.log('hello')
+        const stringDate = `${bookDate}`
+        return stringDate.split(' ').map((e, i) => i < 4 ? e : null).join(' ')
+    }
 
     return (
         <div className={fadeToggle === false ? 'no-book' : 'book-component'}>
             <div className='booking-form'>
+                <div className='booking-form-header'>
+                    <p>Schedule Online</p>
+                    <img /> 
+                </div>
                 <div id='booking-calendar'>
                     <Calender
                     className='calendar'
@@ -68,7 +79,19 @@ function Book(){
                     />
                 </div>
                 <div className='booking-times'>
-                    {timeMap.length === 0 ? 'No available spots. Please try a different date.' : timeMap}
+                    <div className='times-list'>
+                        {timeMap.length === 0 ? ('No available spots. Please try a different date.') : (timeMap)}
+                    </div>
+                    <div className='confirm-booking-section'>
+                        <p className='confirm-title'>Let's Meet!</p>
+                        <p className='confirm-free'>1 hr | Free Service</p>
+                        <hr></hr>
+                        {bookTime.length !== 0 ? 
+                        <p className='confirm-date-display'>{convertDate()}| {bookTime}</p> 
+                        :
+                        <p className='confirm-select-time'>Please select a time!</p>}
+                        <button className='confirm-next-button'>Next</button>
+                    </div>
                 </div>
             </div>
         </div>
