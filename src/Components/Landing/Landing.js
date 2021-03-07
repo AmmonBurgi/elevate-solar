@@ -102,7 +102,7 @@ function Landing(props){
                     {/* </div> */}
                     <div className='landing-meet-button'>
                         <p>Let's Meet</p>
-                        <button onClick={() => props.history.push('/book')}>Book Now</button>
+                        <button onClick={() => props.history.push('/booking')}>Book Now</button>
                     </div>
                 </div>
             </section>

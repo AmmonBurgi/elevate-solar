@@ -4,9 +4,12 @@ import Calender from 'react-calendar'
 import axios from 'axios'
 
 import './book.css'
+import logo from '../../logo_transparent_background.webp'
 import 'react-calendar/dist/Calendar.css';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faChevronLeft} from '@fortawesome/free-solid-svg-icons'
 
-function Book(){
+function Book(props){
     const [fadeToggle, setFadeToggle] = useState(false),
         [bookDate, setBookDate] = useState(new Date()),
         [timeArray, setTimeArray] = useState(['11:00 am', '11:30 am', '12:00 pm', '12:30 pm', '1:00 pm', '1:30 pm', '2:00 pm', '2:30 pm', '3:00 pm', '3:30 pm', '4:00 pm', '4:30 pm', '5:00 pm']),
@@ -15,6 +18,7 @@ function Book(){
     const today = new Date()
 
     useEffect(() => {
+        window.scrollTo(0,0)
         getAvailableTimes(bookDate)
         const timer = setTimeout(() => {
             setFadeToggle(true)
@@ -56,17 +60,25 @@ function Book(){
     })
 
     const convertDate = () => {
-        console.log('hello')
         const stringDate = `${bookDate}`
         return stringDate.split(' ').map((e, i) => i < 4 ? e : null).join(' ')
+    }
+
+    const handleNext = (date, time) => {
+        props.history.push({pathname: '/booking/confirm', state: `${date}| ${time}`})
     }
 
     return (
         <div className={fadeToggle === false ? 'no-book' : 'book-component'}>
             <div className='booking-form'>
                 <div className='booking-form-header'>
-                    <p>Schedule Online</p>
-                    <img /> 
+                    <nav>
+                        <p>Schedule Online</p>
+                        <p 
+                        onClick={() => props.history.goBack()}
+                        id='booking-back-arrow'><FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon> Back</p>
+                    </nav>
+                    <img src={logo} alt='Elevate Logo' /> 
                 </div>
                 <div id='booking-calendar'>
                     <Calender
@@ -90,7 +102,7 @@ function Book(){
                         <p className='confirm-date-display'>{convertDate()}| {bookTime}</p> 
                         :
                         <p className='confirm-select-time'>Please select a time!</p>}
-                        <button className='confirm-next-button'>Next</button>
+                        <button disabled={bookDate.length === 0 || bookTime.length === 0 ? 'disabled' : null} onClick={() => handleNext(convertDate(), bookTime)} className='confirm-next-button'>Next</button>
                     </div>
                 </div>
             </div>
