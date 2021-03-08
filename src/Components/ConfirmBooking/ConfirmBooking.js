@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import axios from 'axios'
 
 import './confirmBooking.css'
 import logo from '../../logo_transparent_background.webp'
@@ -7,7 +8,6 @@ import {faChevronLeft} from '@fortawesome/free-solid-svg-icons'
 
 function ConfirmBooking(props){
     const [fadeToggle, setFadeToggle] = useState(false),
-        [compToggle, setCompToggle] = useState(false),
         [name, setName] = useState(''),
         [email, setEmail] = useState(''),
         [phone, setPhone] = useState(''),
@@ -21,10 +21,19 @@ function ConfirmBooking(props){
           return () => clearTimeout(timer)
     }, [])
 
+    const handleConfirm = () => {
+        const {date, time} = props.location.state
+        console.log(date,date.length, time)
+        axios.post('/api/mail/booking', {name, email, phone, about, date, time})
+        .then(res => {
+            console.log(res.data.response)
+        }).catch(err => console.log(err))
+    }
+
     return (
         <div className={fadeToggle === true ? 'confirm-booking-component' : 'no-booking'}>
             {props.location.state === undefined ? 
-            <p>Please go back <b onClick={() => props.history.push('/booking')}>here</b> to select a date and time!</p>
+            <p className='confirm-here-text'>Please go back <b onClick={() => props.history.push('/booking')}>here</b> to select a date and time!</p>
             :
             <div className='confirm-booking-form'>
                 <div className='booking-form-header'>
@@ -72,8 +81,12 @@ function ConfirmBooking(props){
                         <p className='confirm-title'>Let's Meet!</p>
                         <p className='confirm-free'>1 hr | Free Service</p>
                         <hr></hr>
-                        <p className='confirm-date-display'>{props.location.state}</p> 
-                        <button className='confirm-next-button'>Confirm</button>
+                        <p className='confirm-date-display'>{`${props.location.state.date} | ${props.location.state.time}`}</p> 
+                        {name.length === 0 || email.length === 0 ? <p id='confirm-missed-info'>Please fill in the required info!</p> : null}
+                        <button 
+                        disabled={name.length === 0 || email.length === 0 ? 'disabled' : null}
+                        onClick={handleConfirm}
+                        className='confirm-next-button'>Confirm</button>
                     </div>
                 </section>
             </div>}

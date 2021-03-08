@@ -201,3 +201,8 @@
 .confirm-next-button:focus{
     outline: none;
 }
+.confirm-next-button:disabled:hover{
+    background-color: transparent;
+    color: silver;
+    cursor: default;
+}

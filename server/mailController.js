@@ -73,5 +73,46 @@ module.exports = {
                 res.status(500).send({response: 'Message Did not send!'})
                 console.log(error)
             })
+    },
+    booking: (req, res) => {
+        const db = req.app.get('db')
+        const {name, email, phone, about, date, time} = req.body
+
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+        const msg = {
+            to: 'ammonburgi@gmail.com',
+            from: 'elevate.energy.mail@gmail.com',
+            subject: 'Booking',
+            html: 
+            `<div>
+                <strong>
+                    Booking Date: ${date}<br></br>
+                    Booking Time: ${time}
+                </strong>
+                <p>${about}</p>
+                <strong>
+                    ---<br></br>
+                    ${name}<br></br>
+                    ${email}<br></br>
+                    ${phone}
+                </strong>
+            </div>`
+            }
+    
+            sgMail.send(msg)
+            .then(() => {
+                db.add_booking(date, time, email, (phone.length === 0 ? 'N/A' : phone))
+                .then(() => {
+                    res.status(200).send({response: 'Booking stored and notified to email!'})
+                }).catch(err => {
+                    console.log(err)
+                    res.status(500).send({response: 'Booking was not stored!'})
+                })
+            })
+            .catch((error) => {
+                res.status(500).send({response: 'Message Did not send!'})
+                console.log(error)
+            })        
     }
 }

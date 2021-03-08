@@ -30,15 +30,15 @@ function Book(props){
         setBookTime('')
 
         const date = `${d}`
-        const newDate = date.split(' ')
-        const format = newDate.map((e,i) => i < 4 ? e : null)
+        const format = date.split(' ').filter((e, i) => i < 4).join(' ')
 
         if(d <= today){
             return setTimeArray([])
         }
 
-        axios.get(`/api/booking/time/?date=${format.join(' ')}`)
+        axios.get(`/api/booking/time/?date=${format}`)
         .then(res => {
+            console.log(res.data)
             const defaultTime = ['11:00 am', '11:30 am', '12:00 pm', '12:30 pm', '1:00 pm', '1:30 pm', '2:00 pm', '2:30 pm', '3:00 pm', '3:30 pm', '4:00 pm', '4:30 pm', '5:00 pm']
             const bookedTimes = res.data.map(e => e.time)
 
@@ -61,11 +61,12 @@ function Book(props){
 
     const convertDate = () => {
         const stringDate = `${bookDate}`
-        return stringDate.split(' ').map((e, i) => i < 4 ? e : null).join(' ')
+
+        return stringDate.split(' ').filter((e, i) => i < 4).join(' ')
     }
 
     const handleNext = (date, time) => {
-        props.history.push({pathname: '/booking/confirm', state: `${date}| ${time}`})
+        props.history.push({pathname: '/booking/confirm', state: {date: date, time: time}})
     }
 
     return (
@@ -99,7 +100,7 @@ function Book(props){
                         <p className='confirm-free'>1 hr | Free Service</p>
                         <hr></hr>
                         {bookTime.length !== 0 ? 
-                        <p className='confirm-date-display'>{convertDate()}| {bookTime}</p> 
+                        <p className='confirm-date-display'>{convertDate()} | {bookTime}</p> 
                         :
                         <p className='confirm-select-time'>Please select a time!</p>}
                         <button disabled={bookDate.length === 0 || bookTime.length === 0 ? 'disabled' : null} onClick={() => handleNext(convertDate(), bookTime)} className='confirm-next-button'>Next</button>

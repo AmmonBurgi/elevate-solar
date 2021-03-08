@@ -58,3 +58,15 @@
     font-size: .9vw;
     color: black;
 }
+#confirm-missed-info{
+    font-size: .8vw;
+    color: tomato;
+    margin-bottom: 0;
+}
+.confirm-here-text{
+    font-size: 1.3vw;
+}
+.confirm-here-text b:hover{
+    cursor: pointer;
+    color: silver;
+}

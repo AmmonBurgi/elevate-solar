@@ -12,6 +12,7 @@ const express = require('express'),
     // SendGrid Endpoints
     app.post('/api/mail/career', mailCtrl.careerMail)
     app.post('/api/mail/quote', mailCtrl.quote)
+    app.post('/api/mail/booking', mailCtrl.booking)
 
     // Booking Endpoints
     app.get('/api/booking/time', bookingCtrl.getTime)
