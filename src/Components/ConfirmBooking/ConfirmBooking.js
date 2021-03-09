@@ -11,10 +11,32 @@ function ConfirmBooking(props){
         [name, setName] = useState(''),
         [email, setEmail] = useState(''),
         [phone, setPhone] = useState(''),
-        [about, setAbout] = useState('')
+        [about, setAbout] = useState(''),
+        [successToggle, setSuccessToggle] = useState(false),
+        [conDay, setConDay] = useState(''),
+        [conDayNum, setConDayNum] = useState(''),
+        [conMonth, setConMonth] = useState('')
+
+    const convertDate = () => {
+        const {date} = props.location.state
+
+        const day = date.split(' ').filter((e, i) => i === 0).join(' ')
+        const dayNum = date.split(' ').filter((e, i) => i === 2).join(' ').split('').filter((el,index) => (el !== '0' || index !== 0)).join('')
+
+        const month = date.split(' ').filter((e, i) => i === 1).join(' ')
+
+        console.log(dayNum)
+
+        setConDay(day)
+        setConDayNum(dayNum)
+        setConMonth(month)
+    }
 
     useEffect(() => {
         window.scrollTo(0,0)
+        if(props.location.state !== undefined){
+            convertDate()
+        }
         const timer = setTimeout(() => {
             setFadeToggle(true)
           }, 100);
@@ -88,8 +110,30 @@ function ConfirmBooking(props){
                         onClick={handleConfirm}
                         className='confirm-next-button'>Confirm</button>
                     </div>
+                    
                 </section>
             </div>}
+            <div className={'confirm-success'}>
+                <nav className='success-wrapper'>
+                    <div className='success-main'>
+                        <p>Success! You are now booked.</p>
+                        <p>A confirmation email is on its way to you.</p>
+                        <hr></hr>
+                        <div className='success-submit'>
+                            <nav id='success-date'> 
+                                <p>{conDayNum}</p>
+                                <p>{conMonth}</p>
+                                <hr></hr>
+                                <p>{conDay} {props.location.state !== undefined ? props.location.state.time : null}</p>
+                            </nav>
+                            <hr></hr>
+                            <nav id='success-submit-button'>
+
+                            </nav>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
     )
 }

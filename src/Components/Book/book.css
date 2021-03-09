@@ -152,8 +152,8 @@
     margin-bottom: 1vh;
     height: 5vh;
     background-color: white;
-    border: 2px solid peachpuff;
-    color: peachpuff;
+    border: 2px solid tomato;
+    color: black;
     transition: .25s ease-out;
 }
 .focus-book-date{

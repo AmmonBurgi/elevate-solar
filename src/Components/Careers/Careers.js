@@ -21,6 +21,7 @@ function Careers(){
         [baseFile64, setBaseFile64] = useState('')
 
     useEffect(() => {
+        window.scrollTo(0,0)
         const timer = setTimeout(() => {
           setFadeToggle(true)
         }, 100);

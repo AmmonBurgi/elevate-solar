@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react'
-import {Helmet} from 'react-helmet'
+import React, {useEffect, useState} from 'react';
+import {Helmet} from 'react-helmet';
 
 import './talk.css'
-import solarIcon from '../../logo_transparent_background.webp'
-import solarInstal from '../../Solar Panel Installation (1).webp'
-import solarPanels from '../../Solar Panels on Roof.webp'
-import axios from 'axios'
+import solarIcon from '../../logo_transparent_background.webp';
+import solarInstal from '../../Solar Panel Installation (1).webp';
+import solarPanels from '../../Solar Panels on Roof.webp';
+import axios from 'axios';
 
 function Talk(){
     const [fadeToggle, setFadeToggle] = useState(false),
@@ -34,6 +34,7 @@ function Talk(){
         [phoneError, setPhoneError] = useState(false)
 
     useEffect(() => {
+        window.scrollTo(0,0)
         const timer = setTimeout(() => {
           setFadeToggle(true)
         }, 100);

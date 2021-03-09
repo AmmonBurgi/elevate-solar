@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import {Helmet} from 'react-helmet';
-import Calender from 'react-calendar'
-import axios from 'axios'
+import Calender from 'react-calendar';
+import axios from 'axios';
 
-import './book.css'
-import logo from '../../logo_transparent_background.webp'
+import './book.css';
+import logo from '../../logo_transparent_background.webp';
 import 'react-calendar/dist/Calendar.css';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faChevronLeft} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faChevronLeft} from '@fortawesome/free-solid-svg-icons';
 
 function Book(props){
     const [fadeToggle, setFadeToggle] = useState(false),

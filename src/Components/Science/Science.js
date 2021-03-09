@@ -1,13 +1,14 @@
-import React, {useEffect, useState} from 'react'
-import {Helmet} from 'react-helmet'
+import React, {useEffect, useState} from 'react';
+import {Helmet} from 'react-helmet';
 
-import solarHouse from '../../solar house.webp'
-import './science.css'
+import solarHouse from '../../solar house.webp';
+import './science.css';
 
 function Science(){
     const [fadeToggle, setFadeToggle] = useState(false)
 
     useEffect(() => {
+        window.scrollTo(0,0)
         const timer = setTimeout(() => {
           setFadeToggle(true)
         }, 100);

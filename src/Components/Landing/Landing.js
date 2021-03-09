@@ -1,23 +1,24 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
 
-import panelInstall from '../../Solar-Panel-Installation.webp'
+import panelInstall from '../../Solar-Panel-Installation.webp';
 // import installingPanels from '../../Solar Panel Installation (1).webp'
-import solarIcon from '../../logo_transparent_background.webp'
-import manSolar from '../../Man shows his family the solar panels on.webp'
-import map from '../../map.webp'
-import landingGif from '../../gif-video.mp4'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faHandshake} from '@fortawesome/free-solid-svg-icons'
-import {faBoxOpen} from '@fortawesome/free-solid-svg-icons'
-import {faLightbulb} from '@fortawesome/free-solid-svg-icons'
-import {faGraduationCap} from '@fortawesome/free-solid-svg-icons'
-import './landing.css'
-import { Helmet } from 'react-helmet'
+import solarIcon from '../../logo_transparent_background.webp';
+import manSolar from '../../Man shows his family the solar panels on.webp';
+import map from '../../map.webp';
+import landingGif from '../../gif-video.mp4';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faHandshake} from '@fortawesome/free-solid-svg-icons';
+import {faBoxOpen} from '@fortawesome/free-solid-svg-icons';
+import {faLightbulb} from '@fortawesome/free-solid-svg-icons';
+import {faGraduationCap} from '@fortawesome/free-solid-svg-icons';
+import './landing.css';
+import { Helmet } from 'react-helmet';
 
 function Landing(props){
     const [fadeToggle, setFadeToggle] = useState(false)
 
     useEffect(() => {
+        window.scrollTo(0,0)
         const timer = setTimeout(() => {
           setFadeToggle(true)
         }, 100);
