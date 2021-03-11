@@ -40,7 +40,7 @@ module.exports = {
             console.log(error)
         })
     },
-    quote: (req, res) =>{
+    quote: async(req, res) =>{
         const {first, last, firstStreet, secondStreet, city, region, zip, country,email, homeOwner, howHear, phone} = req.body;
 
         sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -74,9 +74,16 @@ module.exports = {
                 console.log(error)
             })
     },
-    booking: (req, res) => {
+    booking: async(req, res) => {
         const db = req.app.get('db')
         const {name, email, phone, about, date, time} = req.body
+
+        const filledBooking = await db.check_booking(date, time)
+
+        console.log(filledBooking)
+        if(filledBooking[0]){
+            return res.status(500).send({response: 'Date and Time is already booked!'})
+        }
 
         sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -103,8 +110,8 @@ module.exports = {
             sgMail.send(msg)
             .then(() => {
                 db.add_booking(date, time, email, (phone.length === 0 ? 'N/A' : phone))
-                .then(() => {
-                    res.status(200).send({response: 'Booking stored and notified to email!'})
+                .then((scheduled) => {
+                    res.status(200).send({scheduled: scheduled, response: 'Booking stored and notified to email!'})
                 }).catch(err => {
                     console.log(err)
                     res.status(500).send({response: 'Booking was not stored!'})
@@ -114,5 +121,37 @@ module.exports = {
                 res.status(500).send({response: 'Message Did not send!'})
                 console.log(error)
             })        
+    },
+    confirmation: (req, res) => {
+        const {user_email, date, time} = req.body
+
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+        const msg = {
+            to: user_email,
+            from: 'elevate.energy.mail@gmail.com',
+            subject: 'Elevate Solar Energy Booking',
+            html: 
+            `<div>
+                <strong>
+                    Elevate Solar Energy
+                </strong>
+                <p>You are now scheduled for <b>${time}</b>, on <b>${date}</b>.</p>
+                <p>Please call us at 850-905-0115, if you wish to cancel your appointment.</p>
+                <strong>
+                    ---<br></br>
+                    ${email}
+                </strong>
+            </div>`
+            }
+    
+            sgMail.send(msg)
+            .then(() => {
+                res.status(200).send({response: 'Confirmation Email Sent!'})
+            })
+            .catch((error) => {
+                res.status(500).send({response: 'Confirmation Did not send!'})
+                console.log(error)
+            })
     }
 }

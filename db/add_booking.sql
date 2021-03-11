@@ -8,4 +8,4 @@ insert into elevate_book(
     $2,
     $3,
     $4
-)
+) returning date, time, user_email

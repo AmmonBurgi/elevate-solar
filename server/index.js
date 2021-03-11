@@ -13,6 +13,7 @@ const express = require('express'),
     app.post('/api/mail/career', mailCtrl.careerMail)
     app.post('/api/mail/quote', mailCtrl.quote)
     app.post('/api/mail/booking', mailCtrl.booking)
+    app.post('/api/mail/confirmation', mailCtrl.confirmation)
 
     // Booking Endpoints
     app.get('/api/booking/time', bookingCtrl.getTime)

@@ -7,6 +7,7 @@ import Science from './Components/Science/Science'
 import Talk from './Components/Talk/Talk'
 import Book from './Components/Book/Book'
 import ConfirmBooking from './Components/ConfirmBooking/ConfirmBooking'
+import PageNotFound from './Components/PageNotFound/PageNotFound'
 
 export default(
     <Switch>
@@ -17,5 +18,6 @@ export default(
         <Route path='/talk' component={Talk} />
         <Route path='/booking/confirm' component={ConfirmBooking} />
         <Route path='/booking' component={Book} />
+        <Route path='*' component={PageNotFound} />
     </Switch>
 )

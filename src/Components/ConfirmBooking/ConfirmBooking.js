@@ -12,7 +12,7 @@ function ConfirmBooking(props){
         [email, setEmail] = useState(''),
         [phone, setPhone] = useState(''),
         [about, setAbout] = useState(''),
-        [successToggle, setSuccessToggle] = useState(false),
+        [successToggle, setSuccessToggle] = useState(true),
         [conDay, setConDay] = useState(''),
         [conDayNum, setConDayNum] = useState(''),
         [conMonth, setConMonth] = useState('')
@@ -24,8 +24,6 @@ function ConfirmBooking(props){
         const dayNum = date.split(' ').filter((e, i) => i === 2).join(' ').split('').filter((el,index) => (el !== '0' || index !== 0)).join('')
 
         const month = date.split(' ').filter((e, i) => i === 1).join(' ')
-
-        console.log(dayNum)
 
         setConDay(day)
         setConDayNum(dayNum)
@@ -48,6 +46,13 @@ function ConfirmBooking(props){
         console.log(date,date.length, time)
         axios.post('/api/mail/booking', {name, email, phone, about, date, time})
         .then(res => {
+            setSuccessToggle(true)
+            const {date, time, user_email} = res.data.scheduled
+            console.log(res.data.scheduled)
+            axios.post('/api/mail/confirmation', {date, time, user_email})
+            .then((confirmEmail) => console.log(confirmEmail.data.response))
+            .catch(err => console.log(err))
+
             console.log(res.data.response)
         }).catch(err => console.log(err))
     }
@@ -113,26 +118,30 @@ function ConfirmBooking(props){
                     
                 </section>
             </div>}
-            <div className={'confirm-success'}>
+            <div className={successToggle === false ? 'no-success' : 'confirm-success'}>
                 <nav className='success-wrapper'>
-                    <div className='success-main'>
+                </nav>
+                <div className='success-main'>
+                    <div id='success-header'>
                         <p>Success! You are now booked.</p>
                         <p>A confirmation email is on its way to you.</p>
                         <hr></hr>
-                        <div className='success-submit'>
-                            <nav id='success-date'> 
-                                <p>{conDayNum}</p>
-                                <p>{conMonth}</p>
-                                <hr></hr>
-                                <p>{conDay} {props.location.state !== undefined ? props.location.state.time : null}</p>
-                            </nav>
-                            <hr></hr>
-                            <nav id='success-submit-button'>
-
-                            </nav>
-                        </div>
                     </div>
-                </nav>
+                    <div className='success-submit'>
+                        <nav id='success-date'> 
+                            <p>{conDayNum}</p>
+                            <p>{conMonth}</p>
+                             <hr></hr>
+                             <p>{conDay} {props.location.state !== undefined ? props.location.state.time : null}</p>
+                         </nav>
+                        <hr></hr>
+                        <nav id='success-submit-button'>
+                            <p>Let's Meet!</p>
+                            <p>1hr | Free Service</p>
+                            <button onClick={() => props.history.push('/home')}>Home</button>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
     )

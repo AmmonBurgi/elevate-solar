@@ -1,0 +1,25 @@
+#not-found-component{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#not-found-component h1{
+    font-size: 6vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: tomato;
+    font-weight: bold;
+}
+#not-found-component hr{
+    width: 40%;
+}
+#not-found-component p:last-child{
+    margin-top: 0;
+}
+#not-found-title{
+    font-size: 1vw;
+    font-weight: bold;
+}
