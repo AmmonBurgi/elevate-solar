@@ -127,20 +127,32 @@ module.exports = {
 
         sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+        console.log(user_email, date, time)
+
         const msg = {
             to: user_email,
             from: 'elevate.energy.mail@gmail.com',
             subject: 'Elevate Solar Energy Booking',
             html: 
-            `<div>
-                <strong>
+            `<div style='color:black;'>
+                <h2>
                     Elevate Solar Energy
-                </strong>
-                <p>You are now scheduled for <b>${time}</b>, on <b>${date}</b>.</p>
-                <p>Please call us at 850-905-0115, if you wish to cancel your appointment.</p>
+                </h2>
+                <p style='color:black'>
+                    Hi,<br></br>
+                    Your appointment is all set.<br></br>
+                    If you have any questions,<br></br>
+                    feel free to get in touch. 
+                </p>
+                <p style='color:black'>
+                    See you soon! <br></br>
+                    When: ${date}, ${time} <br></br>
+                    Where: At Elevate Solar Energy business address. <br></br>
+                    Price: Free Service!
+                </p>
                 <strong>
                     ---<br></br>
-                    ${email}
+                    ${user_email}
                 </strong>
             </div>`
             }

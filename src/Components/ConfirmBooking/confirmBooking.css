@@ -103,6 +103,7 @@
     padding: 1%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .no-success{
     display: none;
@@ -112,29 +113,79 @@
 .success-submit{
     display: flex;  
     width: 100%;
-    background-color: aliceblue; 
     height: 80%;
 }
-#success-header{
-    /* height: 15%; */
+#success-header-title{
+    font-size: 2vw;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    color: tomato;
 }
-#success-date{
+.success-header p{
+    margin-top: 0;
+    margin-bottom: 1vh;
+    font-size: 1.3vw;
+}
+.success-date{
     width: 50%;
-    background-color: antiquewhite;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#success-date hr{
-    width: 60%;
+.success-date hr{
+    width: 40%;
 }
-#success-submit-button{
+.success-submit-button{
     width: 50%;
-    background-color: antiquewhite;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: left;
+}
+.success-submit-button > nav{
+    width: 80%;
+}
+.success-submit-button p{
+    font-size: 1.2vw;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.success-submit-button button{
+    font-size: 1.2vw;
+    width: 80%;
+    margin-bottom: 1vh;
+    margin-top: 2vh;
+    height: 5vh;
+    background-color: white;
+    border: 2px solid tomato;
+    color: black;
+    transition: .25s ease-out;
+}
+.success-submit-button button:hover{
+    background-color: tomato;
+    color: white;
+}
+#success-submit-title{
+    font-size: 1.8vw;
+    color: tomato;
+    margin-bottom: 0;
+}
+#success-day-num{
+    font-size: 2.8vw;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#success-month{
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-bottom: .5vh;
+    margin-top: 0;
+}
+#success-day-time{
+    font-size: 1.5vw;
+    margin-top: 0;
+    margin-bottom: 0;
 }
