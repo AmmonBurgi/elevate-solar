@@ -16,9 +16,9 @@ function Careers(){
         [emailErr, setEmailErr] = useState(false),
         [phoneErr, setPhoneErr] = useState(false),
         [addressErr, setAddressErr] = useState(false),
-        [aboutErr, setAboutErr] = useState(false),
         [resumeFile, setResumeFile] = useState(null),
-        [baseFile64, setBaseFile64] = useState('')
+        [baseFile64, setBaseFile64] = useState(''),
+        [successToggle, setSuccessToggle] = useState(false)
 
     useEffect(() => {
         window.scrollTo(0,0)
@@ -52,7 +52,6 @@ function Careers(){
         setEmailErr(false)
         setPhoneErr(false)
         setAddressErr(false)
-        setAboutErr(false)
 
         if(name.length === 0){
            return setNameErr(true)
@@ -66,12 +65,17 @@ function Careers(){
         if(address.length === 0){
             return setAddressErr(true)
         }
-        if(about.length === 0){
-            return setAboutErr(true)
-        }
         console.log(baseFile64)
         axios.post('/api/mail/career', {name, email, phone, address, about, baseFile64, resumeName, resumeType})
-        .then(res => console.log(res.data.response))
+        .then(res => {
+            setName('')
+            setEmail('')
+            setPhone('')
+            setAddress('')
+            setAbout('')
+            setSuccessToggle(true)
+            console.log(res.data.response)
+        })
         .catch(err => console.log(err))
 
     }
@@ -90,6 +94,7 @@ function Careers(){
                 <nav>
                     <div className='apply-input-wrapper'>
                         <input 
+                        value={name}
                         className={name.length === 0 ? 'apply-input' : 'fill-input'}
                         onChange={(e) => setName(e.target.value)} 
                         placeholder='Name' />
@@ -132,13 +137,22 @@ function Careers(){
                     <div className='full-resume-wrapper'>
                         <nav className='resume-wrapper'>
                             <button className='fake-file-button'>Resume:</button>
-                            <input onChange={(e) => setResumeFile(e.target.files[0])} className='attach-file-button' type='file' />
+                            <input  
+                            onChange={(e) => setResumeFile(e.target.files[0])} className='attach-file-button' 
+                            type='file' />
                         </nav>
                         <p className='file-name'>{resumeFile !== null ? resumeFile.name : null}</p>
                     </div>
                     <button 
                     className='apply-button'
                     onClick={handleApply}>Apply Now</button>
+                </div>
+            </div>
+            <div className={successToggle === false ? 'no-success' : 'career-success-pop'}>
+                <nav></nav>
+                <div className='career-success-main'>
+                    <nav onClick={() => setSuccessToggle(false)}>X</nav>
+                    <p>Application Sent!</p>
                 </div>
             </div>
         </div>

@@ -17,6 +17,46 @@ function ConfirmBooking(props){
         [conDayNum, setConDayNum] = useState(''),
         [conMonth, setConMonth] = useState('')
 
+    const formatMonth = (month) => {
+        console.log(month)
+        if(month === 'Jan'){
+            setConMonth('January')
+        }
+        if(month === 'Feb'){
+            setConMonth('February')
+        }
+        if(month === 'Mar'){
+            setConMonth('March')
+        }
+        if(month === 'Apr'){
+            setConMonth('April')
+        }
+        if(month === 'May'){
+            setConMonth('May')
+        }
+        if(month === 'Jun'){
+            setConMonth('June')
+        }
+        if(month === 'Jul'){
+            setConMonth('July')
+        }
+        if(month === 'Aug'){
+            setConMonth('August')
+        }
+        if(month === 'Sep'){
+            setConMonth('September')
+        }
+        if(month === 'Oct'){
+            setConMonth('October')
+        }
+        if(month === 'Nov'){
+            setConMonth('November')
+        }
+        if(month === 'Dec'){
+            setConMonth('Dec')
+        }
+        }
+    
     const convertDate = () => {
         const {date} = props.location.state
 
@@ -25,9 +65,10 @@ function ConfirmBooking(props){
 
         const month = date.split(' ').filter((e, i) => i === 1).join(' ')
 
+        formatMonth(month)
+
         setConDay(day)
         setConDayNum(dayNum)
-        setConMonth(month)
     }
 
     useEffect(() => {
@@ -138,7 +179,7 @@ function ConfirmBooking(props){
                         <nav id='success-submit-button'>
                             <p>Let's Meet!</p>
                             <p>1hr | Free Service</p>
-                            <button onClick={() => props.history.push('/home')}>Home</button>
+                            <button onClick={() => props.history.push('/')}>Home</button>
                         </nav>
                     </div>
                 </div>

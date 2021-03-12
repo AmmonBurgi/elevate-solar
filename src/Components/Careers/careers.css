@@ -191,6 +191,9 @@
 .resume-wrapper input:focus .fake-file-button{
     background-color: tomato;
 }
+.attach-file-button:hover{
+    cursor: pointer;
+}
 .file-name{
     margin-left: 10px;
     color: tomato;
@@ -201,6 +204,57 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+}
+
+.career-success-pop{
+    top: 0;
+    left: 0;
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.career-success-pop > nav{
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+}
+.career-success-main{
+    width: 35%;
+    height: 34vh;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 7px, rgba(0, 0, 0, 0.23) 0px 4px 7px;
+    box-sizing: border-box;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.career-success-main nav{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    transition: .25s;
+    font-size: 1.5vw;
+}
+.career-success-main nav:hover{
+    color: tomato;
+    cursor: pointer;
+}
+.career-success-main p{
+    font-size: 2vw;
+    color: tomato;
+    text-transform: uppercase;
 }
 
 @media(max-width: 425px){

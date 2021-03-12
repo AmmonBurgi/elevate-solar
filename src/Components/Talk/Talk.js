@@ -24,14 +24,14 @@ function Talk(){
         [firstError, setFirstError] = useState(false),
         [lastError, setLastError] = useState(false),
         [firstStreetError, setFirstStreetError] = useState(false),
-        [secondStreetError, setSecondStreetError] = useState(false),
         [cityError, setCityError] = useState(false),
         [regionError, setRegionError] = useState(false),
         [zipError, setZipError] = useState(false),
         [countryError, setCountryError] = useState(false),
         [emailError, setEmailError] = useState(false),
         [homeOwnerError, setHomeOwnerError] = useState(false),
-        [phoneError, setPhoneError] = useState(false)
+        [phoneError, setPhoneError] = useState(false),
+        [successToggle, setSuccessToggle] = useState(false)
 
     useEffect(() => {
         window.scrollTo(0,0)
@@ -54,8 +54,7 @@ function Talk(){
 
         setFirstError(false)
         setLastError(false)
-        setFirstStreet(false)
-        setSecondStreetError(false)
+        setFirstStreetError(false)
         setCityError(false)
         setRegionError(false)
         setZipError(false)
@@ -71,10 +70,7 @@ function Talk(){
             return setLastError(true)
         }
         if(firstStreet.length === 0) {
-            return setFirstStreet(true)
-        }
-        if(secondStreet.length === 0 ){
-            return setSecondStreetError(true)
+            return setFirstStreetError(true)
         }
         if(city.length === 0){
             return setCityError(true)
@@ -99,7 +95,22 @@ function Talk(){
         }
 
         axios.post('/api/mail/quote', {first, last, firstStreet, secondStreet, city, region, zip, country, email, homeOwner, howHear, phone})
-        .then(res => console.log(res.data.response))
+        .then(res => {
+            setFirst('')
+            setLast('')
+            setFirstStreet('')
+            setSecondStreet('')
+            setCity('')
+            setRegion('')
+            setZip('')
+            setCountry('')
+            setEmail('')
+            setHomeOwner('')
+            setPhone('')
+            setHowHear('')
+            setSuccessToggle(true)
+            console.log(res.data.response)
+        })
         .catch(err => console.log(err))
     }
 
@@ -146,11 +157,13 @@ function Talk(){
                     <p className='quote-label'>Name</p>
                     <nav className='quote-input-wrapper'>
                         <input
+                        value={first}
                         className={first.length === 0 ? 'quote-input' : 'filled-quote-input'}
                         onChange={(e) => setFirst(e.target.value)}
                         placeholder='First'
                         />
                         <input 
+                        value={last}
                         className={last.length === 0 ? 'quote-input' : 'filled-quote-input'}
                         onChange={(e) => setLast(e.target.value)}
                         placeholder='Last' />
@@ -161,31 +174,37 @@ function Talk(){
                 <div className='quote-address' >
                     <p className='quote-label'>Address</p>
                     <input 
+                    value={firstStreet}
                     id='full-input'
                     className={firstStreet.length === 0 ? 'quote-input' : 'filled-quote-input'} 
                     onChange={(e) => setFirstStreet(e.target.value)}
                     placeholder='Street Address' />
                     <input 
+                    value={secondStreet}
                     id='full-input'
                     className={secondStreet.length === 0 ? 'quote-input' : 'filled-quote-input'} 
                     onChange={(e) => setSecondStreet(e.target.value)}
                     placeholder='Second Street Address' />
                     <nav className='quote-input-wrapper'>
                         <input
+                        value={city}
                         className={city.length === 0 ? 'quote-input' : 'filled-quote-input'} 
                         onChange={(e) => setCity(e.target.value)}
                         placeholder='City' />
                         <input 
+                        value={region}
                         className={region.length === 0 ? 'quote-input' : 'filled-quote-input'}
                         onChange={(e) => setRegion(e.target.value)}
                         placeholder='State / Region' />
                     </nav>
                     <nav className='quote-input-wrapper'>
                         <input 
+                        value={zip}
                         className={zip.length === 0 ? 'quote-input' : 'filled-quote-input'}
                         onChange={(e) => setZip(e.target.value)}
                         placeholder='Postal / Zip Code' />
                         <select 
+                        value={country}
                         className={country.length === 0 ? 'quote-input' : 'filled-quote-input'}
                         onChange={(e) => setCountry(e.target.value)}
                         placeholder='United States'>
@@ -195,7 +214,6 @@ function Talk(){
                     </nav>
                 </div>
                 <p className={firstStreetError === true ? 'quote-input-err' : 'no-error'}>Invalid Street Address!</p>
-                <p className={secondStreetError === true ? 'quote-input-err' : 'no-error'}>Invalid Second Street Address!</p>
                 <p className={cityError === true ? 'quote-input-err' : 'no-error'}>Invalid City!</p>
                 <p className={regionError === true ? 'quote-input-err' : 'no-error'}>Invalid Region!</p>
                 <p className={zipError === true ? 'quote-input-err' : 'no-error'}>Invalid Zip!</p>
@@ -203,6 +221,7 @@ function Talk(){
                 <div className='quote-email' >
                     <p className='quote-label'>Email</p>
                     <input
+                    value={email}
                     id='full-input'
                     className={email.length === 0 ? 'quote-input' : 'filled-quote-input'}
                     onChange={(e) => setEmail(e.target.value)}
@@ -247,6 +266,7 @@ function Talk(){
                     <p id='no-margin' className='quote-label'>How did you hear about us?</p>
                     <p className='quote-sub-label'>If it was in the online media, on what website was it?</p>
                     <textarea
+                    value={howHear}
                     id='quote-textarea'
                     className={howHear.length === 0 ? 'quote-input' : 'filled-quote-input'}
                     onChange={(e) => setHowHear(e.target.value)}
@@ -255,6 +275,7 @@ function Talk(){
                 <div className='quote-number'>
                     <p className='quote-label'>Phone Number</p>
                     <input
+                    value={phone}
                     id='full-input'
                     className={phone.length === 0 ? 'quote-input' : 'filled-quote-input'}
                     onChange={(e) => setPhone(e.target.value)}
@@ -263,6 +284,14 @@ function Talk(){
                 <p className={phoneError === true ? 'quote-input-err' : 'no-error'}>Invalid Phone!</p>
                 <div className='quote-button'>
                     <button onClick={handleQuoteForm} >Get Quote</button>
+                </div>
+            </div>
+            <div className={successToggle === false ? 'no-success' : 'talk-success-pop'}>
+                <nav></nav>
+                <div className='talk-success-main'>
+                    <nav onClick={() => setSuccessToggle(false)}>X</nav>
+                    <p>Details sent successfully!</p>
+                    <p id='success-shortly'>We will contact you shortly.</p>
                 </div>
             </div>
         </div>

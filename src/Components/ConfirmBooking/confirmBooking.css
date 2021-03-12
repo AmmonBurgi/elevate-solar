@@ -101,6 +101,8 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 7px, rgba(0, 0, 0, 0.23) 0px 4px 7px;
     box-sizing: border-box;
     padding: 1%;
+    display: flex;
+    flex-direction: column;
 }
 .no-success{
     display: none;
@@ -114,12 +116,13 @@
     height: 80%;
 }
 #success-header{
-    height: 15%;
+    /* height: 15%; */
 }
 #success-date{
     width: 50%;
     background-color: antiquewhite;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -129,6 +132,8 @@
 #success-submit-button{
     width: 50%;
     background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: left;
