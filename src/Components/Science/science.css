@@ -6,7 +6,6 @@
     text-align: left;
     font-family: 'Enriqueta', serif;
     color: rgb(66,66,66);
-    font-size: 1vw;
     opacity: 1;
     transition: .75s ease-in-out;
 }
@@ -19,6 +18,7 @@
 }
 .science-steps-section > p{
     margin-left: .5vw;
+    font-size: 1.1vw;
 }
 .science-steps{
     display: flex;

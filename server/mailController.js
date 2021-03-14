@@ -1,15 +1,16 @@
-const sgMail = require('@sendgrid/mail')
-const fs = require('fs')
+const sgMail = require('@sendgrid/mail');
+const fs = require('fs');
 
 module.exports = {
     careerMail: (req, res) => {
-        const {name, email, phone, address, about, baseFile64, resumeName, resumeType} = req.body
-        console.log(baseFile64)
+        const {name, email, phone, address, about} = req.body
+        // console.log('file', req.files)
+        // console.log(data)
 
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-        // pathToAttachment = `${resume}/${resume}`;
-        // attachment = fs.readFileSync(resumeFile).toString("base64");
+        // pathToAttachment = `http://localhost:4030/${resumeName}`;
+        // attachment = fs.readFileSync(pathToAttachment).toString("base64");
         // console.log(attachment)
 
         const msg = {
@@ -20,15 +21,15 @@ module.exports = {
         `<div>
             <strong>Name: ${name}<br></br>Email: ${email}<br></br>Phone: ${phone}<br></br>Address: ${address}</strong>
             <p>${about}</p>
-        </div>`,
-        attachments: [
-            {
-                content: baseFile64.toString('base64'),
-                filename: resumeName,
-                type: resumeType,
-                disposition: 'attachment'
-            }
-        ]
+        </div>`
+        // attachments: [
+        //     {
+        //         content: attachment,
+        //         filename: resumeName,
+        //         type: resumeType,
+        //         disposition: 'attachment'
+        //     }
+        // ]
         }
 
         sgMail.send(msg)

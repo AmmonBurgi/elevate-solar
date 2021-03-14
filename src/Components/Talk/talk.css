@@ -224,6 +224,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 .talk-success-pop > nav{
     background-color: grey;

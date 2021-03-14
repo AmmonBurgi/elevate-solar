@@ -206,3 +206,35 @@
     color: silver;
     cursor: default;
 }
+
+@media(max-width:1440px){
+    .times-list{
+        font-size: 1.5vw;
+    }
+    .confirm-booking-section{
+        padding: 1% 1.5% 1% 1.5%;
+    }
+    .confirm-title{
+        font-size: 2.2vw;
+    }
+    .confirm-free{
+        font-size: 1.5vw;
+    }
+    .confirm-date-display{
+        font-size: 1.2vw;
+    }
+    .confirm-select-time{
+        font-size: 1.2vw;
+    }
+    .confirm-next-button{
+        font-size: 1.5vw;
+    }
+    .book-date-buttons{
+        margin-left: 1%;
+        width: 22%;
+    }
+    .focus-book-date{
+        margin-left: 1%;
+        width: 22%;
+    }
+}

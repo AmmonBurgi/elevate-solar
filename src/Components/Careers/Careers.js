@@ -16,8 +16,7 @@ function Careers(){
         [emailErr, setEmailErr] = useState(false),
         [phoneErr, setPhoneErr] = useState(false),
         [addressErr, setAddressErr] = useState(false),
-        [resumeFile, setResumeFile] = useState(null),
-        [baseFile64, setBaseFile64] = useState(''),
+        // [resumeFile, setResumeFile] = useState(null),
         [successToggle, setSuccessToggle] = useState(false)
 
     useEffect(() => {
@@ -28,26 +27,29 @@ function Careers(){
         return () => clearTimeout(timer)
       }, [])
 
-    const encodeFileBase = (file) => {
-        console.log(resumeFile[0])
-        const reader = new FileReader();
-        if(file){
-            reader.readAsDataURL(file);
-            reader.onload = () => {
-                const base64 = reader.result;
-                setBaseFile64(base64)
-            };
-            reader.onerror = (error) => {
-                console.log(error)
-            }
-        }
-    }
+    // const encodeFileBase = (file) => {
+    //     console.log(resumeFile[0])
+    //     const reader = new FileReader();
+    //     if(file){
+    //         reader.readAsDataURL(file);
+    //         reader.onload = () => {
+    //             const base64 = reader.result;
+    //             setBaseFile64(base64)
+    //         };
+    //         reader.onerror = (error) => {
+    //             console.log(error)
+    //         }
+    //     }
+    // }
 
-    const handleApply = async () => {
-        const resumeType = resumeFile.type,
-            resumeName = resumeFile.name
+    const handleApply = () => {
+        // const resumeName = resumeFile.name,
+        //     resumeType = resumeFile.type
 
-        encodeFileBase(resumeFile)
+        // const data = new FormData();
+        // data.append('resumeFile', resumeFile, resumeFile.name)
+        // console.log(data)
+
         setNameErr(false)
         setEmailErr(false)
         setPhoneErr(false)
@@ -65,8 +67,8 @@ function Careers(){
         if(address.length === 0){
             return setAddressErr(true)
         }
-        console.log(baseFile64)
-        axios.post('/api/mail/career', {name, email, phone, address, about, baseFile64, resumeName, resumeType})
+
+        axios.post('/api/mail/career', {name, email, phone, address, about})
         .then(res => {
             setName('')
             setEmail('')
@@ -135,13 +137,13 @@ function Careers(){
                 />
                 <div className='apply-button-wrapper'>
                     <div className='full-resume-wrapper'>
-                        <nav className='resume-wrapper'>
+                        {/* <nav className='resume-wrapper'>
                             <button className='fake-file-button'>Resume:</button>
                             <input  
                             onChange={(e) => setResumeFile(e.target.files[0])} className='attach-file-button' 
                             type='file' />
                         </nav>
-                        <p className='file-name'>{resumeFile !== null ? resumeFile.name : null}</p>
+                        <p className='file-name'>{resumeFile !== null ? resumeFile.name : null}</p> */}
                     </div>
                     <button 
                     className='apply-button'

@@ -81,6 +81,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 .success-wrapper{
     background-color: grey;
@@ -188,4 +189,8 @@
     font-size: 1.5vw;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+@media(max-width: 1440px){
+    
 }
