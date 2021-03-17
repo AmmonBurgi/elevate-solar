@@ -130,6 +130,9 @@
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 7px, rgba(0, 0, 0, 0.23) 0px 4px 7px;
 }
+.confirm-booking-section-phone{
+    display: none;
+}
 .confirm-booking-section hr{
     color: black;
     border-color: black;
@@ -232,9 +235,114 @@
     .book-date-buttons{
         margin-left: 1%;
         width: 22%;
+        height: 8vh;
     }
     .focus-book-date{
         margin-left: 1%;
         width: 22%;
+        height: 8vh;
     }
+    #booking-back-arrow{
+        font-size: 1.5vw;
+    }
+}
+@media(max-width: 425px){
+    .booking-form-header{
+        width: 95%;
+    }
+    #booking-calendar{
+        width: 95%;
+        box-shadow: none;
+        padding: 0;
+    }
+    .booking-times{
+        width: 95%;
+    }
+    .booking-form{
+        border-radius: 0;
+    }
+    .booking-form-header img{
+        width: 20%;
+    }
+    .booking-form-header p{
+        font-size: 4vw;
+    }
+    #booking-back-arrow{
+        font-size: 2.5vw;
+    }
+
+    #booking-calendar .react-calendar__navigation *{ 
+        font-size: 3.5vw;
+      }
+    #booking-calendar .react-calendar__tile{
+        font-size: 3vw;
+        height: 7vh;
+        text-align: center;
+    }
+    #booking-calendar .react-calendar{
+        font-size: 3vw;
+    }
+
+    .booking-times{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-date-buttons{
+        margin-left: 1%;
+        width: 22%;
+        height: 7vh;
+        font-size: 3vw;
+    }
+    .focus-book-date{
+        margin-left: 1%;
+        width: 22%;
+        height: 7vh;
+        font-size: 3vw;
+    }
+    .times-list{
+        width: 100%;
+        font-size: 3.5vw;
+    }
+    .confirm-booking-section{
+        display: none;
+    }
+    .confirm-booking-section-phone{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 2px solid peachpuff;
+        margin-top: 3vh;
+        padding-top: 3%;
+    }
+    .confirm-booking-section-phone > div{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 1vh;
+    }
+    .confirm-booking-section-phone > div nav{
+        text-align: left;
+        border-right: 2px solid tomato;
+        padding-right: 3%;
+        margin-right: 3%;
+        box-sizing: border-box;
+    }
+    .confirm-select-time{
+        font-size: 3.5vw;
+    }
+    .confirm-date-display{
+        font-size: 3.5vw;
+    }
+    .confirm-free{
+        font-size: 3.2vw;
+    }
+    .confirm-title{
+        font-size: 4.8vw;
+    }
+    .confirm-next-button{
+        font-size: 3.5vw;
+    }
+
 }

@@ -105,6 +105,19 @@ function Book(props){
                         <p className='confirm-select-time'>Please select a time!</p>}
                         <button disabled={bookDate.length === 0 || bookTime.length === 0 ? 'disabled' : null} onClick={() => handleNext(convertDate(), bookTime)} className='confirm-next-button'>Next</button>
                     </div>
+                    <div className='confirm-booking-section-phone'>
+                        <div>
+                            <nav>
+                                <p className='confirm-title'>Let's Meet!</p>
+                                <p className='confirm-free'>1 hr | Free Service</p>
+                            </nav>
+                            {bookTime.length !== 0 ? 
+                            <p className='confirm-date-display'>{convertDate()} | {bookTime}</p> 
+                            :
+                            <p className='confirm-select-time'>Please select a time!</p>}
+                        </div>
+                        <button disabled={bookDate.length === 0 || bookTime.length === 0 ? 'disabled' : null} onClick={() => handleNext(convertDate(), bookTime)} className='confirm-next-button'>Next</button>
+                    </div>
                 </div>
             </div>
         </div>
