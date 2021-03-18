@@ -306,6 +306,17 @@
     .resume-wrapper{
         width: 40%;
     }
+
+    .career-success-main{
+        width: 90%;
+        height: 30vh;
+    }
+    .career-success-main nav{
+        font-size: 5vw;
+    }
+    .career-success-main p{
+        font-size: 5vw;
+    }
 }
 
 
@@ -357,5 +368,16 @@
     }
     .resume-wrapper{
         width: 40%;
+    }
+
+    .career-success-main{
+        width: 80%;
+        height: 50vh;
+    }
+    .career-success-main nav{
+        font-size: 4vw;
+    }
+    .career-success-main p{
+        font-size: 4vw;
     }
 }

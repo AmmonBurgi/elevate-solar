@@ -265,22 +265,22 @@
         width: 20%;
     }
     .booking-form-header p{
-        font-size: 4vw;
+        font-size: 4.2vw;
     }
     #booking-back-arrow{
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
 
     #booking-calendar .react-calendar__navigation *{ 
-        font-size: 3.5vw;
+        font-size: 3.7vw;
       }
     #booking-calendar .react-calendar__tile{
-        font-size: 3vw;
+        font-size: 3.2vw;
         height: 7vh;
         text-align: center;
     }
     #booking-calendar .react-calendar{
-        font-size: 3vw;
+        font-size: 3.2vw;
     }
 
     .booking-times{
@@ -290,19 +290,19 @@
 
     .book-date-buttons{
         margin-left: 1%;
-        width: 22%;
+        width: 30.2%;
         height: 7vh;
-        font-size: 3vw;
+        font-size: 3.2vw;
     }
     .focus-book-date{
         margin-left: 1%;
-        width: 22%;
+        width: 30.2%;
         height: 7vh;
-        font-size: 3vw;
+        font-size: 3.2vw;
     }
     .times-list{
         width: 100%;
-        font-size: 3.5vw;
+        font-size: 3.7vw;
     }
     .confirm-booking-section{
         display: none;
@@ -330,19 +330,125 @@
         box-sizing: border-box;
     }
     .confirm-select-time{
-        font-size: 3.5vw;
+        font-size: 3.7vw;
     }
     .confirm-date-display{
-        font-size: 3.5vw;
+        font-size: 3.7vw;
     }
     .confirm-free{
-        font-size: 3.2vw;
+        font-size: 3.4vw;
     }
     .confirm-title{
-        font-size: 4.8vw;
+        font-size: 5vw;
     }
     .confirm-next-button{
-        font-size: 3.5vw;
+        font-size: 3.7vw;
+    }
+}
+
+
+@media(max-height: 425px){
+    .booking-form-header{
+        width: 95%;
+    }
+    #booking-calendar{
+        width: 95%;
+        box-shadow: none;
+        padding: 0;
+        margin-top: 2vh;
+        margin-bottom: 4vh;
+    }
+    .booking-times{
+        width: 95%;
+    }
+    .booking-form{
+        border-radius: 0;
+    }
+    .booking-form-header img{
+        width: 20%;
+    }
+    .booking-form-header p{
+        font-size: 4.2vw;
+    }
+    #booking-back-arrow{
+        font-size: 3vw;
     }
 
+    #booking-calendar .react-calendar__navigation *{ 
+        font-size: 3.7vw;
+      }
+    #booking-calendar .react-calendar__tile{
+        font-size: 3.2vw;
+        height: auto;
+        text-align: center;
+    }
+    #booking-calendar .react-calendar{
+        font-size: 3.2vw;
+    }
+
+    .booking-times{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-date-buttons{
+        margin-left: 1%;
+        width: 30.3%;
+        height: 11vh;
+        font-size: 3.2vw;
+        margin-bottom: 2vh;
+    }
+    .focus-book-date{
+        margin-left: 1%;
+        width: 30.3%;
+        height: 11vh;
+        font-size: 3.2vw;
+        margin-bottom: 2vh;
+    }
+    .times-list{
+        width: 100%;
+        font-size: 3.7vw;
+        margin-bottom: 3vh;
+    }
+    .confirm-booking-section{
+        display: none;
+    }
+    .confirm-booking-section-phone{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 2px solid peachpuff;
+        margin-top: 3vh;
+        padding-top: 3%;
+    }
+    .confirm-booking-section-phone > div{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 7vh;
+        margin-top: 2vh;
+    }
+    .confirm-booking-section-phone > div nav{
+        text-align: left;
+        border-right: 2px solid tomato;
+        padding-right: 3%;
+        margin-right: 3%;
+        box-sizing: border-box;
+    }
+    .confirm-select-time{
+        font-size: 3.7vw;
+    }
+    .confirm-date-display{
+        font-size: 3.7vw;
+    }
+    .confirm-free{
+        font-size: 3.4vw;
+    }
+    .confirm-title{
+        font-size: 5vw;
+    }
+    .confirm-next-button{
+        font-size: 3.7vw;
+    }
 }

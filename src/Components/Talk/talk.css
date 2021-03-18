@@ -381,6 +381,20 @@
         font-size: 3.5vw;
         margin-bottom: 1vh;
     }
+
+    .talk-success-main{
+        width: 90%;
+        height: 30vh;
+    }
+    .talk-success-main nav{
+        font-size: 5vw;
+    }
+    .talk-success-main p{
+        font-size: 5vw;
+    }
+    #success-shortly{
+        font-size: 5vw;
+    }
 }
 
 
@@ -475,6 +489,7 @@
     .filled-quote-input{
         width: 100%;
         font-size: 3vw;
+        height: 10vh;
     }
     .quote-radio-input{
         width: 4vw;
@@ -494,5 +509,19 @@
         width: 50%;
         font-size: 3.5vw;
         margin-bottom: 1vh;
+    }
+
+    .talk-success-main{
+        width: 80%;
+        height: 50vh;
+    }
+    .talk-success-main nav{
+        font-size: 4vw;
+    }
+    .talk-success-main p{
+        font-size: 4vw;
+    }
+    #success-shortly{
+        font-size: 4vw;
     }
 }

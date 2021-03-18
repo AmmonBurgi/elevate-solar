@@ -145,7 +145,7 @@ function ConfirmBooking(props){
                             onChange={(e) => setAbout(e.target.value)} />
                         </nav>
                     </div>
-                    <div className='confirm-booking-section'>
+                    <div id='confirm-booking-section-main' className='confirm-booking-section'>
                         <p className='confirm-title'>Let's Meet!</p>
                         <p className='confirm-free'>1 hr | Free Service</p>
                         <hr></hr>
@@ -156,7 +156,22 @@ function ConfirmBooking(props){
                         onClick={handleConfirm}
                         className='confirm-next-button'>Confirm</button>
                     </div>
-                    
+                    <div className='confirm-booking-section-phone'>
+                        <div>
+                            <nav>
+                                <p className='confirm-title'>Let's Meet!</p>
+                                <p className='confirm-free'>1 hr | Free Service</p>
+                            </nav>
+                            <div id='phone-missing-info'>
+                                <p className='confirm-date-display'>{`${props.location.state.date} | ${props.location.state.time}`}</p> 
+                                {name.length === 0 || email.length === 0 ? <p id='confirm-missed-info'>Please fill in the required info!</p> : null}
+                            </div>
+                        </div>
+                        <button 
+                        disabled={name.length === 0 || email.length === 0 ? 'disabled' : null}
+                        onClick={handleConfirm}
+                        className='confirm-next-button'>Confirm</button>
+                    </div>
                 </section>
             </div>}
             <div className={successToggle === false ? 'no-success' : 'confirm-success'}>

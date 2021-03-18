@@ -17,7 +17,7 @@ function Careers(){
         [phoneErr, setPhoneErr] = useState(false),
         [addressErr, setAddressErr] = useState(false),
         // [resumeFile, setResumeFile] = useState(null),
-        [successToggle, setSuccessToggle] = useState(false)
+        [successToggle, setSuccessToggle] = useState(true)
 
     useEffect(() => {
         window.scrollTo(0,0)
