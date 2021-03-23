@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 import panelInstall from '../../Solar-Panel-Installation.webp';
 // import installingPanels from '../../Solar Panel Installation (1).webp'
-import solarIcon from '../../logo_transparent_background.webp';
+import solarIcon from '../../logo_transparent_background.jpg';
 import manSolar from '../../Man shows his family the solar panels on.webp';
 import map from '../../map.webp';
 import landingGif from '../../gif-video.mp4';

@@ -17,7 +17,7 @@ function Careers(){
         [phoneErr, setPhoneErr] = useState(false),
         [addressErr, setAddressErr] = useState(false),
         // [resumeFile, setResumeFile] = useState(null),
-        [successToggle, setSuccessToggle] = useState(true)
+        [successToggle, setSuccessToggle] = useState(false)
 
     useEffect(() => {
         window.scrollTo(0,0)
@@ -91,7 +91,7 @@ function Careers(){
             <div className='apply-form'>
                 <div className='apply-header'>
                     <p>Apply Today!</p>
-                    <img alt='elevate-solar-icon' src={solarIcon} />
+                    <img width='200' height='200' alt='elevate-solar-icon' src={solarIcon} />
                 </div>
                 <nav>
                     <div className='apply-input-wrapper'>

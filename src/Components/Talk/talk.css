@@ -21,6 +21,9 @@
     margin-bottom: 5vh;
     align-items: center;
 }
+.talk-first-text{
+    width: 50%;
+}
 .talk-top-first img{
     width: 50%;
     height: auto;
@@ -43,6 +46,9 @@
 .talk-first-text p{
     font-size: 1.3vw;
     line-height: 3.5vh;
+}
+.talk-last-text{
+    width: 50%;
 }
 .talk-last-text p{
     font-size: 1.3vw;

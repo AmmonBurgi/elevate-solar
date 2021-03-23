@@ -7,7 +7,10 @@ const express = require('express'),
     port = SERVER_PORT,
     app = express()
 
+const path = require('path')
+
     app.use(express.json())
+    app.use(express.static(__dirname + '/../build'))
 
     // SendGrid Endpoints
     app.post('/api/mail/career', mailCtrl.careerMail)
@@ -25,6 +28,9 @@ const express = require('express'),
     }).then(db => {
         app.set('db', db)
         console.log('db connected')
+        app.listen(port, () => console.log(`server listening on port ${port}`))
     })
 
-    app.listen(port, () => console.log(`server listening on port ${port}`))
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '../build/index.html'))
+      });
