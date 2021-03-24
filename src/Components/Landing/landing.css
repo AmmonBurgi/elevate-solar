@@ -119,6 +119,9 @@
 .landing-meet-button button:hover{
     cursor: pointer;
 }
+.landing-meet-button button:focus{
+    outline: none;
+}
 
 .landing-tb-hr{
     width: 100%;
@@ -343,6 +346,7 @@
     }
     .landing-meet-button button{
         font-size: 5.8vw;
+        height: 21%;
     }
 
     .landing-bottom-section{
