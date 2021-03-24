@@ -115,6 +115,7 @@
     font-size: 20px;
     border: none;
     font-weight: bolder;
+    background-color: white;
     color: tomato;
     z-index: 100;
     transition: .25s ease-out;
