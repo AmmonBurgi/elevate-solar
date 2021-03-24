@@ -30,7 +30,7 @@
 .science-align-top-steps{
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 25%;
 }
 .science-steps-description{
     color: tomato;
@@ -63,7 +63,7 @@
 .science-align-bottom-steps{
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 25%;
 }
 .science-sun-section > p{
     margin-left: .5vw;

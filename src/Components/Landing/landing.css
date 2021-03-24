@@ -116,6 +116,7 @@
     border: none;
     font-weight: bolder;
     color: tomato;
+    z-index: 100;
     transition: .25s ease-out;
 }
 .landing-meet-button button:hover{

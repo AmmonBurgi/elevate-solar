@@ -52,6 +52,7 @@
 
 .works-bottom-section nav{
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     margin-top: 4vh;
