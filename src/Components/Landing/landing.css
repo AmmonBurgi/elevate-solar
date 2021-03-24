@@ -108,6 +108,8 @@
     color: white;
 }
 .landing-meet-button button{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
     border-radius: 20px;
     padding: 2% 4% 2% 4%;
     font-size: 20px;
