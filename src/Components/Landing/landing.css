@@ -352,6 +352,7 @@
         width: 40%;
         -webkit-appearance: none;
         -webkit-border-radius: 20px;
+        border-radius: 20px;
     }
 
     .landing-bottom-section{
