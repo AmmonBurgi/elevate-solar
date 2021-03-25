@@ -322,6 +322,9 @@
 
 
 @media(max-height: 425px){
+    .apply-header{
+        height: 30vh;
+    }
     .apply-form{
         height: 200vh;
         width: 100%;
@@ -333,7 +336,7 @@
     }
     .apply-form > nav{
         flex-direction: column;
-        height: 30%;
+        height: 20%;
         margin-bottom: 0;
     }
     .apply-input{   
@@ -345,7 +348,7 @@
     }
     .input-error{
         font-size: 3vw;
-        bottom: -90%;
+        bottom: -70%;
     }
     .apply-input-wrapper{
         width: 100%;
