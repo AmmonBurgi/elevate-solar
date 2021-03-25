@@ -303,6 +303,7 @@
     .apply-button{
         width: 50%;
         font-size: 4vw;
+        margin-bottom: 1vh;
     }
     .resume-wrapper{
         width: 40%;
@@ -325,8 +326,10 @@
     .apply-header{
         height: 30vh;
     }
+    .apply-button{
+        margin-bottom: 1vh;
+    }
     .apply-form{
-        height: 200vh;
         width: 100%;
         border-radius: 0;
         margin-bottom: 1vh;
@@ -336,15 +339,18 @@
     }
     .apply-form > nav{
         flex-direction: column;
-        height: 20%;
+        /* height: 20%; */
         margin-bottom: 0;
     }
     .apply-input{   
+        height: 12vh;
         font-size: 3vw;
         margin-bottom: 1vh;
     }
     .fill-input{
+        height: 12vh;
         font-size: 3vw;
+        margin-bottom: 1vh;
     }
     .input-error{
         font-size: 3vw;
@@ -357,11 +363,11 @@
     }
     .text-area{
         font-size: 3vw;
-        height: 30%;
+        height: 45vh;
     }
     .fill-text-area{
         font-size: 3vw;
-        height: 30%;
+        height: 45vh;
     }
     .apply-button-wrapper{
         margin-bottom: 0;
