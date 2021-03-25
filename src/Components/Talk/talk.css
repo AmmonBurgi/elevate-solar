@@ -411,6 +411,12 @@
 
 
 @media (max-height: 425px){
+    .talk-first-text{
+        width: 100%;
+    }
+    .talk-last-text{
+        width: 100%;
+    }
     .talk-top-first{
         flex-direction: column;
         margin-bottom: 0;
