@@ -191,10 +191,16 @@
         margin-right: 2vw;
         margin-left: 2vw;
     }
+    .science-align-bottom-steps{
+        width: 100%;
+    }
 }
 
 
 @media(max-height: 425px){
+    .science-align-bottom-steps{
+        width: 100%;
+    }
     #science-title{
         font-size: 6vw;
         margin-right: 2vw;
